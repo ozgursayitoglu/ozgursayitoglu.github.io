@@ -161,40 +161,37 @@
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
                 <div class="bg-dark rounded-2xl overflow-hidden border border-white/10 shadow-2xl group flex flex-col">
                     <div class="relative aspect-[9/16] bg-black overflow-hidden">
-                        <video class="w-full h-full object-cover" controls preload="metadata" poster="videos/1.jpg">
+                        <video class="w-full h-full object-cover" controls preload="auto" playsinline muted poster="videos/1.jpg" onloadeddata="this.pause();">
                             <source src="videos/1.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
-                    <div class="p-8">
-                        <span class="text-accent text-xs uppercase tracking-widest font-semibold block mb-1">Brand Reel 01</span>
-                        <h3 class="text-white font-serif text-xl font-bold mb-2">Cinematic Teaser</h3>
+                    <div class="p-8 text-center">
+                        <h3 class="text-white font-serif text-xl font-bold">Cinematic Teaser</h3>
                     </div>
                 </div>
 
                 <div class="bg-dark rounded-2xl overflow-hidden border border-white/10 shadow-2xl group flex flex-col">
                     <div class="relative aspect-[9/16] bg-black overflow-hidden">
-                        <video class="w-full h-full object-cover" controls preload="metadata" poster="videos/2.jpg">
+                        <video class="w-full h-full object-cover" controls preload="auto" playsinline muted poster="videos/2.jpg" onloadeddata="this.pause();">
                             <source src="videos/2.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
-                    <div class="p-8">
-                        <span class="text-accent text-xs uppercase tracking-widest font-semibold block mb-1">Brand Reel 02</span>
-                        <h3 class="text-white font-serif text-xl font-bold mb-2">Commercial Production</h3>
+                    <div class="p-8 text-center">
+                        <h3 class="text-white font-serif text-xl font-bold">Commercial Production</h3>
                     </div>
                 </div>
 
                 <div class="bg-dark rounded-2xl overflow-hidden border border-white/10 shadow-2xl group flex flex-col">
                     <div class="relative aspect-[9/16] bg-black overflow-hidden">
-                        <video class="w-full h-full object-cover" controls preload="metadata" poster="videos/3.jpg">
+                        <video class="w-full h-full object-cover" controls preload="auto" playsinline muted poster="videos/3.jpg" onloadeddata="this.pause();">
                             <source src="videos/3.mp4" type="video/mp4">
                             Your browser does not support the video tag.
                         </video>
                     </div>
-                    <div class="p-8">
-                        <span class="text-accent text-xs uppercase tracking-widest font-semibold block mb-1">Brand Reel 03</span>
-                        <h3 class="text-white font-serif text-xl font-bold mb-2">Spatial Walkthrough</h3>
+                    <div class="p-8 text-center">
+                        <h3 class="text-white font-serif text-xl font-bold">Spatial Walkthrough</h3>
                     </div>
                 </div>
             </div>
@@ -259,7 +256,7 @@
                     <div>
                         <label class="block text-[10px] uppercase tracking-[0.2em] text-gray-400 mb-2 font-medium">Your Name</label>
                         <input type="text" required class="w-full bg-card border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-accent transition-colors text-sm" placeholder="John Doe">
-                    </div>
+</div>
                     <div>
                         <label class="block text-[10px] uppercase tracking-[0.2em] text-gray-400 mb-2 font-medium">Email Address</label>
                         <input type="email" required class="w-full bg-card border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-accent transition-colors text-sm" placeholder="john@example.com">
@@ -269,7 +266,7 @@
                         <textarea rows="4" required class="w-full bg-card border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-accent transition-colors text-sm" placeholder="Tell us about your project..."></textarea>
                     </div>
                     <button type="submit" class="w-full py-4 rounded-xl bg-accent text-black font-semibold text-xs uppercase tracking-[0.2em] hover:bg-white transition-all duration-300 shadow-xl shadow-accent/10">
-                        Send Message
+                        Send Message Message
                     </button>
                 </form>
             </div>
