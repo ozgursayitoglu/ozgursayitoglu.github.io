@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ozgur Sayitoglu | Professional Photography & Brand Reels</title>
+    <title>Ozgur Sayitoglu | Professional Photography & Brand Production</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -26,24 +26,27 @@
     </script>
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
 </head>
 <body class="bg-dark text-gray-100 font-sans antialiased selection:bg-accent selection:text-black">
 
-    <!-- Header / Navbar -->
+    <!-- Header & Navigation -->
     <header class="fixed top-0 left-0 w-full z-50 bg-dark/80 backdrop-blur-xl border-b border-white/5 transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
-            <a href="#home" class="flex items-center"><img src="logo_white.png" alt="Ozgur Sayitoglu" class="h-6 md:h-8 w-auto inline-block"></a>
+            <a href="index.html" class="font-serif text-xl md:text-2xl tracking-widest text-white flex items-center gap-2">
+                OZGUR SAYITOGLU<span class="text-accent font-bold">.</span>
+            </a>
             
             <nav class="hidden md:flex items-center space-x-8 text-xs uppercase tracking-[0.25em] font-medium text-gray-300">
-                <a href="#home" class="hover:text-accent transition-colors">Home</a>
-                <a href="#portfolio" class="hover:text-accent transition-colors">Portfolio</a>
-                <a href="#reels" class="hover:text-accent transition-colors">Brand Reels</a>
-                <a href="#about" class="hover:text-accent transition-colors">About</a>
-                <a href="#contact" class="hover:text-accent transition-colors">Contact</a>
+                <a href="index.html#home" class="hover:text-accent transition-colors">Home</a>
+                <a href="index.html#portfolio" class="hover:text-accent transition-colors">Portfolio</a>
+                <a href="index.html#reels" class="hover:text-accent transition-colors">Brand Reels</a>
+                <a href="index.html#about" class="hover:text-accent transition-colors">About</a>
+                <a href="index.html#contact" class="hover:text-accent transition-colors">Contact</a>
             </nav>
 
             <div class="hidden md:flex items-center space-x-4">
-                <a href="#contact" class="px-6 py-3 rounded-full border border-accent/40 text-accent text-xs uppercase tracking-widest font-semibold hover:bg-accent hover:text-black transition-all duration-300 shadow-lg shadow-accent/5">
+                <a href="index.html#contact" class="px-6 py-3 rounded-full border border-accent/40 text-accent text-xs uppercase tracking-widest font-semibold hover:bg-accent hover:text-black transition-all duration-300 shadow-lg shadow-accent/5">
                     Book Session
                 </a>
             </div>
@@ -52,106 +55,166 @@
                 <i class="fa-solid fa-bars-staggered"></i>
             </button>
         </div>
+
+        <div id="mobile-menu" class="hidden md:hidden bg-card/95 backdrop-blur-2xl border-b border-white/10 px-6 py-8 space-y-6 text-center shadow-2xl">
+            <a href="index.html#home" class="block text-sm uppercase tracking-widest hover:text-accent transition-colors">Home</a>
+            <a href="index.html#portfolio" class="block text-sm uppercase tracking-widest hover:text-accent transition-colors">Portfolio</a>
+            <a href="index.html#reels" class="block text-sm uppercase tracking-widest hover:text-accent transition-colors">Brand Reels</a>
+            <a href="index.html#about" class="block text-sm uppercase tracking-widest hover:text-accent transition-colors">About</a>
+            <a href="index.html#contact" class="block text-sm uppercase tracking-widest hover:text-accent transition-colors">Contact</a>
+            <div class="pt-2">
+                <a href="index.html#contact" class="inline-block w-full py-3.5 rounded-full bg-accent text-black text-xs uppercase tracking-widest font-semibold">
+                    Book Session
+                </a>
+            </div>
+        </div>
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="relative min-h-screen flex items-center justify-center px-6 overflow-hidden pt-24">
-        <div class="absolute inset-0 z-0 opacity-40">
-            <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1920&q=85" alt="Hero Background" class="w-full h-full object-cover">
-            <div class="absolute inset-0 bg-gradient-to-t from-dark via-dark/70 to-transparent"></div>
-        </div>
-        
-        <div class="relative z-10 max-w-5xl mx-auto text-center">
-            <span class="text-accent text-xs uppercase tracking-[0.3em] font-semibold mb-4 block">Visual Artist & Director</span>
-            <h1 class="font-serif text-5xl md:text-8xl font-bold tracking-tight text-white mb-6 leading-none">
-                Capturing <span class="italic font-light text-accent">Essence</span> & Form
+    <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-cover bg-center px-6" style="background-image: linear-gradient(to bottom, rgba(7,7,7,0.4), rgba(7,7,7,0.95)), url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=1920&q=80');">
+        <div class="relative z-10 text-center max-w-5xl mx-auto mt-16">
+            <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-6 animate-pulse">
+                <span class="w-2 h-2 rounded-full bg-accent"></span>
+                <span class="text-accent uppercase tracking-[0.3em] text-[10px] md:text-xs font-semibold">Available for Global Commissions</span>
+            </div>
+            <h1 class="font-serif text-4xl sm:text-6xl md:text-8xl font-bold text-white tracking-tight mb-8 leading-[1.1]">
+                Ozgur Sayitoglu <br><span class="italic font-light text-gray-300">Photography.</span>
             </h1>
-            <p class="text-gray-400 font-light text-base md:text-lg max-w-2xl mx-auto mb-10 leading-relaxed">
-                Elevating brands and architecture through refined cinematic vision, exquisite lighting, and uncompromising detail.
+            <p class="text-gray-400 text-base md:text-lg max-w-2xl mx-auto mb-12 font-light leading-relaxed">
+                Professional architectural, real estate, food & drink, product, and portrait photography with cinematic visual storytelling.
             </p>
-            <div class="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <a href="#portfolio" class="w-full sm:w-auto px-8 py-4 rounded-full bg-accent text-black font-semibold text-xs uppercase tracking-widest hover:bg-accentHover transition-all duration-300 shadow-xl shadow-accent/10">
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-5">
+                <a href="#portfolio" class="w-full sm:w-auto px-9 py-4 rounded-full bg-accent text-black font-semibold text-xs uppercase tracking-[0.2em] hover:bg-white transition-all duration-300 shadow-xl shadow-accent/10">
                     Explore Portfolio
                 </a>
-                <a href="#contact" class="w-full sm:w-auto px-8 py-4 rounded-full border border-white/20 text-white font-semibold text-xs uppercase tracking-widest hover:bg-white/10 transition-all duration-300">
+                <a href="#contact" class="w-full sm:w-auto px-9 py-4 rounded-full border border-white/20 text-white font-semibold text-xs uppercase tracking-[0.2em] hover:border-accent hover:text-accent transition-all duration-300 backdrop-blur-sm">
                     Get in Touch
                 </a>
             </div>
         </div>
+        <div class="absolute bottom-10 left-1/2 transform -translate-x-1/2 animate-bounce text-white/40 text-lg hidden md:block">
+            <a href="#portfolio"><i class="fa-solid fa-arrow-down-long"></i></a>
+        </div>
     </section>
 
-    <!-- Portfolio Section (Single Column Layout) -->
-    <section id="portfolio" class="py-32 px-6 max-w-5xl mx-auto">
-        <div class="text-center mb-20">
-            <span class="text-accent text-xs uppercase tracking-[0.3em] font-semibold mb-3 block">Selected Works</span>
-            <h2 class="font-serif text-4xl md:text-6xl font-bold text-white mb-4">Portfolio Categories</h2>
+    <!-- Portfolio Section with Category Cards -->
+    <section id="portfolio" class="py-32 px-6 max-w-7xl mx-auto">
+        <div class="text-center max-w-2xl mx-auto mb-20">
+            <span class="text-accent uppercase tracking-[0.3em] text-xs font-semibold mb-3 block">Selected Works</span>
+            <h2 class="font-serif text-3xl md:text-5xl font-bold text-white mb-4">Portfolio Categories</h2>
+            <p class="text-gray-400 font-light text-sm md:text-base">Click any category to explore the complete 15-photo gallery.</p>
             <div class="w-16 h-0.5 bg-accent mx-auto mt-6"></div>
         </div>
 
-        <div class="space-y-12">
-            <!-- Architecture -->
-            <a href="architecture.html" class="group relative block overflow-hidden rounded-3xl bg-card border border-white/5 aspect-[16/9] shadow-2xl">
-                <img src="https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=1600&q=85" alt="Architecture" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
-                <div class="absolute inset-0 bg-gradient-to-t from-dark/95 via-dark/50 to-transparent flex flex-col justify-end p-8 md:p-12">
-                    <h3 class="font-serif text-3xl md:text-5xl font-bold text-white mb-2 group-hover:text-accent transition-colors">Architecture</h3>
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <a href="architecture.html" class="group relative overflow-hidden rounded-2xl bg-card border border-white/5 aspect-[4/5] shadow-2xl block">
+                <img src="PORTFOLIO/ARCHITECTURE/1.jpg" onerror="this.src='https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80'" alt="Architecture" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+                <div class="absolute inset-0 bg-gradient-to-t from-dark/95 via-dark/40 to-transparent flex flex-col justify-end p-8">
+                    <span class="text-accent text-xs uppercase tracking-widest font-semibold mb-1">Explore Gallery</span>
+                    <h3 class="text-white font-serif text-3xl font-bold mb-3">Architecture</h3>
+                    <span class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-white/80 group-hover:text-accent transition-colors">
+                        View Works (15 Photos) <i class="fa-solid fa-arrow-right-long"></i>
+                    </span>
                 </div>
             </a>
 
-            <!-- Food & Drink -->
-            <a href="food.html" class="group relative block overflow-hidden rounded-3xl bg-card border border-white/5 aspect-[16/9] shadow-2xl">
-                <img src="https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1600&q=85" alt="Food & Drink" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
-                <div class="absolute inset-0 bg-gradient-to-t from-dark/95 via-dark/50 to-transparent flex flex-col justify-end p-8 md:p-12">
-                    <h3 class="font-serif text-3xl md:text-5xl font-bold text-white mb-2 group-hover:text-accent transition-colors">Food & Drink</h3>
+            <a href="food.html" class="group relative overflow-hidden rounded-2xl bg-card border border-white/5 aspect-[4/5] shadow-2xl block">
+                <img src="PORTFOLIO/FOOD & DRINK/1.jpg" onerror="this.src='https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80'" alt="Food & Drink" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+                <div class="absolute inset-0 bg-gradient-to-t from-dark/95 via-dark/40 to-transparent flex flex-col justify-end p-8">
+                    <span class="text-accent text-xs uppercase tracking-widest font-semibold mb-1">Explore Gallery</span>
+                    <h3 class="text-white font-serif text-3xl font-bold mb-3">Food & Drink</h3>
+                    <span class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-white/80 group-hover:text-accent transition-colors">
+                        View Works (15 Photos) <i class="fa-solid fa-arrow-right-long"></i>
+                    </span>
                 </div>
             </a>
 
-            <!-- Portrait -->
-            <a href="portrait.html" class="group relative block overflow-hidden rounded-3xl bg-card border border-white/5 aspect-[16/9] shadow-2xl">
-                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=1600&q=85" alt="Portrait" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
-                <div class="absolute inset-0 bg-gradient-to-t from-dark/95 via-dark/50 to-transparent flex flex-col justify-end p-8 md:p-12">
-                    <h3 class="font-serif text-3xl md:text-5xl font-bold text-white mb-2 group-hover:text-accent transition-colors">Portrait</h3>
+            <a href="portrait.html" class="group relative overflow-hidden rounded-2xl bg-card border border-white/5 aspect-[4/5] shadow-2xl block">
+                <img src="PORTFOLIO/PORTRAIT/1.jpg" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80'" alt="Portrait" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+                <div class="absolute inset-0 bg-gradient-to-t from-dark/95 via-dark/40 to-transparent flex flex-col justify-end p-8">
+                    <span class="text-accent text-xs uppercase tracking-widest font-semibold mb-1">Explore Gallery</span>
+                    <h3 class="text-white font-serif text-3xl font-bold mb-3">Portrait</h3>
+                    <span class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-white/80 group-hover:text-accent transition-colors">
+                        View Works (15 Photos) <i class="fa-solid fa-arrow-right-long"></i>
+                    </span>
                 </div>
             </a>
 
-            <!-- Product -->
-            <a href="product.html" class="group relative block overflow-hidden rounded-3xl bg-card border border-white/5 aspect-[16/9] shadow-2xl">
-                <img src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=1600&q=85" alt="Product" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
-                <div class="absolute inset-0 bg-gradient-to-t from-dark/95 via-dark/50 to-transparent flex flex-col justify-end p-8 md:p-12">
-                    <h3 class="font-serif text-3xl md:text-5xl font-bold text-white mb-2 group-hover:text-accent transition-colors">Product</h3>
+            <a href="product.html" class="group relative overflow-hidden rounded-2xl bg-card border border-white/5 aspect-[4/5] shadow-2xl block">
+                <img src="PORTFOLIO/PRODUCT/1.jpg" onerror="this.src='https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80'" alt="Product" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+                <div class="absolute inset-0 bg-gradient-to-t from-dark/95 via-dark/40 to-transparent flex flex-col justify-end p-8">
+                    <span class="text-accent text-xs uppercase tracking-widest font-semibold mb-1">Explore Gallery</span>
+                    <h3 class="text-white font-serif text-3xl font-bold mb-3">Product</h3>
+                    <span class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-white/80 group-hover:text-accent transition-colors">
+                        View Works (15 Photos) <i class="fa-solid fa-arrow-right-long"></i>
+                    </span>
                 </div>
             </a>
 
-            <!-- Real Estate -->
-            <a href="realestate.html" class="group relative block overflow-hidden rounded-3xl bg-card border border-white/5 aspect-[16/9] shadow-2xl">
-                <img src="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=1600&q=85" alt="Real Estate" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
-                <div class="absolute inset-0 bg-gradient-to-t from-dark/95 via-dark/50 to-transparent flex flex-col justify-end p-8 md:p-12">
-                    <h3 class="font-serif text-3xl md:text-5xl font-bold text-white mb-2 group-hover:text-accent transition-colors">Real Estate</h3>
+            <a href="realestate.html" class="group relative overflow-hidden rounded-2xl bg-card border border-white/5 aspect-[4/5] shadow-2xl block">
+                <img src="PORTFOLIO/REAL ESTATE/1.jpg" onerror="this.src='https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80'" alt="Real Estate" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+                <div class="absolute inset-0 bg-gradient-to-t from-dark/95 via-dark/40 to-transparent flex flex-col justify-end p-8">
+                    <span class="text-accent text-xs uppercase tracking-widest font-semibold mb-1">Explore Gallery</span>
+                    <h3 class="text-white font-serif text-3xl font-bold mb-3">Real Estate</h3>
+                    <span class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-white/80 group-hover:text-accent transition-colors">
+                        View Works (15 Photos) <i class="fa-solid fa-arrow-right-long"></i>
+                    </span>
                 </div>
             </a>
+
         </div>
     </section>
 
     <!-- Brand Reels Section -->
-    <section id="reels" class="py-32 px-6 max-w-7xl mx-auto border-t border-white/5">
-        <div class="text-center mb-16">
-            <span class="text-accent text-xs uppercase tracking-[0.3em] font-semibold mb-3 block">Cinematic Motion</span>
-            <h2 class="font-serif text-4xl md:text-6xl font-bold text-white mb-4">Brand Reels</h2>
-            <div class="w-16 h-0.5 bg-accent mx-auto mt-6"></div>
-        </div>
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <div class="rounded-3xl overflow-hidden bg-card border border-white/5 aspect-video flex items-center justify-center relative group">
-                <img src="https://images.unsplash.com/photo-1574717024653-61fd2cf4d44d?auto=format&fit=crop&w=1200&q=80" alt="Showreel" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                <div class="absolute inset-0 bg-dark/40 flex items-center justify-center">
-                    <div class="w-16 h-16 rounded-full bg-accent text-black flex items-center justify-center text-xl pl-1 shadow-2xl">
-                        <i class="fa-solid fa-play"></i>
+    <section id="reels" class="py-32 bg-card border-y border-white/5 px-6">
+        <div class="max-w-7xl mx-auto">
+            <div class="text-center max-w-2xl mx-auto mb-20">
+                <span class="text-accent uppercase tracking-[0.3em] text-xs font-semibold mb-3 block">Motion & Reels</span>
+                <h2 class="font-serif text-3xl md:text-5xl font-bold text-white mb-6">Short Videos for Your Brand</h2>
+                <p class="text-gray-400 font-light text-sm md:text-base leading-relaxed">
+                    High-impact vertical reels tailored for Instagram, TikTok, and YouTube Shorts.
+                </p>
+                <div class="w-16 h-0.5 bg-accent mx-auto mt-6"></div>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <div class="bg-dark rounded-2xl overflow-hidden border border-white/10 shadow-2xl group flex flex-col">
+                    <div class="relative aspect-[9/16] bg-black overflow-hidden">
+                        <video class="w-full h-full object-cover" controls preload="metadata" poster="videos/1.jpg">
+                            <source src="videos/1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="p-8">
+                        <span class="text-accent text-xs uppercase tracking-widest font-semibold block mb-1">Brand Reel 01</span>
+                        <h3 class="text-white font-serif text-xl font-bold mb-2">Cinematic Teaser</h3>
                     </div>
                 </div>
-            </div>
-            <div class="rounded-3xl overflow-hidden bg-card border border-white/5 aspect-video flex items-center justify-center relative group">
-                <img src="https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=1200&q=80" alt="Commercial Reel" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
-                <div class="absolute inset-0 bg-dark/40 flex items-center justify-center">
-                    <div class="w-16 h-16 rounded-full bg-accent text-black flex items-center justify-center text-xl pl-1 shadow-2xl">
-                        <i class="fa-solid fa-play"></i>
+
+                <div class="bg-dark rounded-2xl overflow-hidden border border-white/10 shadow-2xl group flex flex-col">
+                    <div class="relative aspect-[9/16] bg-black overflow-hidden">
+                        <video class="w-full h-full object-cover" controls preload="metadata" poster="videos/2.jpg">
+                            <source src="videos/2.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="p-8">
+                        <span class="text-accent text-xs uppercase tracking-widest font-semibold block mb-1">Brand Reel 02</span>
+                        <h3 class="text-white font-serif text-xl font-bold mb-2">Commercial Production</h3>
+                    </div>
+                </div>
+
+                <div class="bg-dark rounded-2xl overflow-hidden border border-white/10 shadow-2xl group flex flex-col">
+                    <div class="relative aspect-[9/16] bg-black overflow-hidden">
+                        <video class="w-full h-full object-cover" controls preload="metadata" poster="videos/3.jpg">
+                            <source src="videos/3.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
+                    <div class="p-8">
+                        <span class="text-accent text-xs uppercase tracking-widest font-semibold block mb-1">Brand Reel 03</span>
+                        <h3 class="text-white font-serif text-xl font-bold mb-2">Spatial Walkthrough</h3>
                     </div>
                 </div>
             </div>
@@ -159,52 +222,113 @@
     </section>
 
     <!-- About Section -->
-    <section id="about" class="py-32 px-6 max-w-5xl mx-auto border-t border-white/5">
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-            <div class="rounded-3xl overflow-hidden aspect-[4/5] border border-white/5">
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=1000&q=85" alt="Ozgur Sayitoglu" class="w-full h-full object-cover">
+    <section id="about" class="py-32 px-6 max-w-7xl mx-auto">
+        <div class="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
+            <div class="relative">
+                <div class="absolute -top-6 -left-6 w-80 h-80 bg-accent/10 rounded-full blur-3xl"></div>
+                <!-- Profile Image -> profil.jpg -->
+                <img src="profil.jpg" onerror="this.src='https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=800&q=80'" alt="Ozgur Sayitoglu" class="relative z-10 rounded-3xl w-full object-cover aspect-[4/5] shadow-2xl border border-white/10">
             </div>
             <div>
-                <span class="text-accent text-xs uppercase tracking-[0.3em] font-semibold mb-3 block">About the Artist</span>
-                <h2 class="font-serif text-3xl md:text-5xl font-bold text-white mb-6">Ozgur Sayitoglu</h2>
-                <p class="text-gray-400 font-light leading-relaxed mb-6">
-                    With over a decade of experience in high-end commercial, architectural, and portrait photography, Ozgur Sayitoglu brings a cinematic sensitivity to every frame. His work bridges the gap between artistic integrity and commercial impact.
+                <span class="text-accent uppercase tracking-[0.3em] text-xs font-semibold mb-3 block">About The Photographer</span>
+                <h2 class="font-serif text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">Hi, I'm Ozgur Sayitoglu. Commercial Photographer & Director.</h2>
+                <p class="text-gray-400 font-light mb-6 leading-relaxed">
+                    With over 8 years of professional experience, I transform architecture, spaces, products, culinary art, and portraits into timeless visual assets. My approach blends technical precision with cinematic storytelling to elevate brands and spaces.
                 </p>
-                <p class="text-gray-400 font-light leading-relaxed mb-8">
-                    Based internationally, collaborating with leading global brands, architects, and publications to craft timeless visual narratives.
-                </p>
-                <a href="#contact" class="inline-block px-8 py-4 rounded-full border border-accent text-accent text-xs uppercase tracking-widest font-semibold hover:bg-accent hover:text-black transition-all duration-300">
-                    Collaborate With Me
-                </a>
+                <div class="grid grid-cols-3 gap-6 pt-8 border-t border-white/10">
+                    <div>
+                        <span class="font-serif text-3xl md:text-4xl font-bold text-white block mb-1">250+</span>
+                        <span class="text-[10px] md:text-xs uppercase tracking-widest text-gray-400">Projects Delivered</span>
+                    </div>
+                    <div>
+                        <span class="font-serif text-3xl md:text-4xl font-bold text-white block mb-1">8+</span>
+                        <span class="text-[10px] md:text-xs uppercase tracking-widest text-gray-400">Years Mastery</span>
+                    </div>
+                    <div>
+                        <span class="font-serif text-3xl md:text-4xl font-bold text-white block mb-1">100%</span>
+                        <span class="text-[10px] md:text-xs uppercase tracking-widest text-gray-400">Client Joy</span>
+                    </div>
+                </div>
             </div>
         </div>
     </section>
 
     <!-- Contact Section -->
-    <section id="contact" class="py-32 px-6 max-w-4xl mx-auto border-t border-white/5 text-center">
-        <span class="text-accent text-xs uppercase tracking-[0.3em] font-semibold mb-3 block">Start a Conversation</span>
-        <h2 class="font-serif text-4xl md:text-6xl font-bold text-white mb-6">Get in Touch</h2>
-        <p class="text-gray-400 font-light mb-12 max-w-lg mx-auto">
-            Available for global assignments, commissions, and creative direction.
-        </p>
-        <div class="flex flex-col md:flex-row items-center justify-center gap-8 text-sm tracking-widest uppercase font-medium text-gray-300">
-            <a href="mailto:info@ozgursayitoglu.com" class="hover:text-accent transition-colors flex items-center gap-3">
-                <i class="fa-solid fa-envelope text-accent"></i> info@ozgursayitoglu.com
-            </a>
-            <span class="hidden md:inline text-white/20">/</span>
-            <a href="tel:+440000000000" class="hover:text-accent transition-colors flex items-center gap-3">
-                <i class="fa-solid fa-phone text-accent"></i> +44 (0) 000 000 0000
-            </a>
+    <section id="contact" class="py-32 bg-card border-t border-white/5 px-6">
+        <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <div>
+                <span class="text-accent uppercase tracking-[0.3em] text-xs font-semibold mb-3 block">Get In Touch</span>
+                <h2 class="font-serif text-3xl md:text-5xl font-bold text-white mb-6">Let's Create Together.</h2>
+                <p class="text-gray-400 font-light mb-10 leading-relaxed">
+                    Have an upcoming project or want to book a session? Reach out directly via email or the contact form.
+                </p>
+                <div class="space-y-6">
+                    <div class="flex items-center space-x-5">
+                        <div class="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center text-accent text-lg">
+                            <i class="fa-solid fa-envelope"></i>
+                        </div>
+                        <div>
+                            <span class="text-[10px] uppercase tracking-[0.2em] text-gray-500 block mb-1">Email Direct</span>
+                            <a href="mailto:ozgur.sayitoglu@gmail.com" class="text-white font-medium hover:text-accent transition-colors">ozgur.sayitoglu@gmail.com</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-dark p-8 md:p-12 rounded-3xl border border-white/10 shadow-2xl">
+                <form onsubmit="event.preventDefault(); alert('Thank you! Your message has been sent successfully.');" class="space-y-6">
+                    <div>
+                        <label class="block text-[10px] uppercase tracking-[0.2em] text-gray-400 mb-2 font-medium">Your Name</label>
+                        <input type="text" required class="w-full bg-card border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-accent transition-colors text-sm" placeholder="John Doe">
+                    </div>
+                    <div>
+                        <label class="block text-[10px] uppercase tracking-[0.2em] text-gray-400 mb-2 font-medium">Email Address</label>
+                        <input type="email" required class="w-full bg-card border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-accent transition-colors text-sm" placeholder="john@example.com">
+                    </div>
+                    <div>
+                        <label class="block text-[10px] uppercase tracking-[0.2em] text-gray-400 mb-2 font-medium">Message</label>
+                        <textarea rows="4" required class="w-full bg-card border border-white/10 rounded-xl px-5 py-4 text-white focus:outline-none focus:border-accent transition-colors text-sm" placeholder="Tell us about your project..."></textarea>
+                    </div>
+                    <button type="submit" class="w-full py-4 rounded-xl bg-accent text-black font-semibold text-xs uppercase tracking-[0.2em] hover:bg-white transition-all duration-300 shadow-xl shadow-accent/10">
+                        Send Message
+                    </button>
+                </form>
+            </div>
         </div>
     </section>
 
     <!-- Footer -->
     <footer class="py-12 px-6 border-t border-white/10 text-center text-gray-500 text-xs uppercase tracking-widest">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-            <a href="#home" class="flex items-center"><img src="logo_white.png" alt="Ozgur Sayitoglu" class="h-6 md:h-8 w-auto inline-block"></a>
+            <a href="#" class="font-serif text-xl font-bold tracking-wider text-white">
+                OZGUR SAYITOGLU<span class="text-accent">.</span>
+            </a>
             <p>&copy; 2026 Ozgur Sayitoglu Photography. All rights reserved.</p>
         </div>
     </footer>
 
+    <!-- Scripts -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+    <script>
+        const menuBtn = document.getElementById('menu-btn');
+        const mobileMenu = document.getElementById('mobile-menu');
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
+        });
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
+        window.addEventListener('scroll', () => {
+            const navbar = document.getElementById('navbar');
+            if (window.scrollY > 0) {
+                navbar.classList.add('bg-dark/95', 'shadow-xl');
+            } else {
+                navbar.classList.remove('bg-dark/95', 'shadow-xl');
+            }
+        });
+    </script>
 </body>
 </html>
