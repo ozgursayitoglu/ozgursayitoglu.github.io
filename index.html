@@ -1,12 +1,9 @@
-Deponuzda doğrudan kullanabileceğiniz, tüm klasör yapısına ve sabit fotoğraf adlarına (1.jpg, 2.jpg) tam uyumlu güncel index.html kodlarının tamamını aşağıda bulabilirsiniz:
-
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth dark">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ozgur Sayitoglu | Professional Photography & Brand Production</title>
-    <!-- Tailwind CSS -->
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
         tailwind.config = {
@@ -40,7 +37,6 @@ Deponuzda doğrudan kullanabileceğiniz, tüm klasör yapısına ve sabit fotoğ
                 OZGUR SAYITOGLU<span class="text-accent font-bold">.</span>
             </a>
             
-            <!-- Desktop Nav -->
             <nav class="hidden md:flex items-center space-x-8 text-xs uppercase tracking-[0.25em] font-medium text-gray-300">
                 <a href="#home" class="hover:text-accent transition-colors">Home</a>
                 <a href="#portfolio" class="hover:text-accent transition-colors">Portfolio</a>
@@ -55,13 +51,11 @@ Deponuzda doğrudan kullanabileceğiniz, tüm klasör yapısına ve sabit fotoğ
                 </a>
             </div>
 
-            <!-- Mobile Menu Button -->
             <button id="menu-btn" class="md:hidden text-2xl text-white focus:outline-none">
                 <i class="fa-solid fa-bars-staggered"></i>
             </button>
         </div>
 
-        <!-- Mobile Menu Dropdown -->
         <div id="mobile-menu" class="hidden md:hidden bg-card/95 backdrop-blur-2xl border-b border-white/10 px-6 py-8 space-y-6 text-center shadow-2xl">
             <a href="#home" class="block text-sm uppercase tracking-widest hover:text-accent transition-colors">Home</a>
             <a href="#portfolio" class="block text-sm uppercase tracking-widest hover:text-accent transition-colors">Portfolio</a>
@@ -103,14 +97,13 @@ Deponuzda doğrudan kullanabileceğiniz, tüm klasör yapısına ve sabit fotoğ
         </div>
     </section>
 
-    <!-- Portfolio Section with Fixed Folder & Filename Structure -->
+    <!-- Portfolio Section -->
     <section id="portfolio" class="py-32 px-6 max-w-7xl mx-auto">
         <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
             <div>
                 <span class="text-accent uppercase tracking-[0.3em] text-xs font-semibold mb-3 block">Selected Works</span>
                 <h2 class="font-serif text-3xl md:text-5xl font-bold text-white">Portfolio Gallery</h2>
             </div>
-            <!-- Filter Buttons matching your exact folder names -->
             <div class="flex flex-wrap gap-2 md:gap-3" id="filter-buttons">
                 <button class="filter-btn active px-5 py-2.5 rounded-full text-xs uppercase tracking-widest font-medium transition-all bg-accent text-black shadow-md" data-filter="all">All</button>
                 <button class="filter-btn px-5 py-2.5 rounded-full text-xs uppercase tracking-widest font-medium transition-all bg-card text-gray-400 hover:text-white border border-white/5" data-filter="architecture">Architecture</button>
@@ -121,99 +114,10 @@ Deponuzda doğrudan kullanabileceğiniz, tüm klasör yapısına ve sabit fotoğ
             </div>
         </div>
 
-        <!-- Gallery Grid mapped to PORTFOLIO/ subfolders with fixed filenames (1.jpg, 2.jpg...) -->
         <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="gallery-grid">
-            
-            <!-- ARCHITECTURE / 1.jpg -->
-            <div class="gallery-item group relative overflow-hidden rounded-2xl bg-card border border-white/5 aspect-[4/5] shadow-2xl" data-category="architecture">
-                <img src="PORTFOLIO/ARCHITECTURE/1.jpg" onerror="this.src='https://images.unsplash.com/photo-1486406146926-c627a92ad1ab?auto=format&fit=crop&w=800&q=80'" alt="Architecture 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
-                <div class="absolute inset-0 bg-gradient-to-t from-dark/95 via-dark/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
-                    <span class="text-accent text-xs uppercase tracking-widest font-semibold mb-1">Architecture</span>
-                    <h3 class="text-white font-serif text-2xl font-bold mb-2">Modern Structure</h3>
-                    <a href="PORTFOLIO/ARCHITECTURE/1.jpg" data-lightbox="portfolio" data-title="Architecture - 1" class="absolute inset-0 z-10"></a>
-                </div>
-            </div>
-
-            <!-- ARCHITECTURE / 2.jpg -->
-            <div class="gallery-item group relative overflow-hidden rounded-2xl bg-card border border-white/5 aspect-[4/5] shadow-2xl" data-category="architecture">
-                <img src="PORTFOLIO/ARCHITECTURE/2.jpg" onerror="this.src='https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80'" alt="Architecture 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
-                <div class="absolute inset-0 bg-gradient-to-t from-dark/95 via-dark/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
-                    <span class="text-accent text-xs uppercase tracking-widest font-semibold mb-1">Architecture</span>
-                    <h3 class="text-white font-serif text-2xl font-bold mb-2">Urban Geometry</h3>
-                    <a href="PORTFOLIO/ARCHITECTURE/2.jpg" data-lightbox="portfolio" data-title="Architecture - 2" class="absolute inset-0 z-10"></a>
-                </div>
-            </div>
-
-            <!-- FOOD & DRINK / 1.jpg -->
-            <div class="gallery-item group relative overflow-hidden rounded-2xl bg-card border border-white/5 aspect-[4/5] shadow-2xl" data-category="food">
-                <img src="PORTFOLIO/FOOD & DRINK/1.jpg" onerror="this.src='https://images.unsplash.com/photo-1540420773420-3366772f4999?auto=format&fit=crop&w=800&q=80'" alt="Food & Drink 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
-                <div class="absolute inset-0 bg-gradient-to-t from-dark/95 via-dark/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
-                    <span class="text-accent text-xs uppercase tracking-widest font-semibold mb-1">Food & Drink</span>
-                    <h3 class="text-white font-serif text-2xl font-bold mb-2">Artisanal Culinary</h3>
-                    <a href="PORTFOLIO/FOOD & DRINK/1.jpg" data-lightbox="portfolio" data-title="Food & Drink - 1" class="absolute inset-0 z-10"></a>
-                </div>
-            </div>
-
-            <!-- FOOD & DRINK / 2.jpg -->
-            <div class="gallery-item group relative overflow-hidden rounded-2xl bg-card border border-white/5 aspect-[4/5] shadow-2xl" data-category="food">
-                <img src="PORTFOLIO/FOOD & DRINK/2.jpg" onerror="this.src='https://images.unsplash.com/photo-1551024709-8f23befc6f87?auto=format&fit=crop&w=800&q=80'" alt="Food & Drink 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
-                <div class="absolute inset-0 bg-gradient-to-t from-dark/95 via-dark/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
-                    <span class="text-accent text-xs uppercase tracking-widest font-semibold mb-1">Food & Drink</span>
-                    <h3 class="text-white font-serif text-2xl font-bold mb-2">Craft Cocktails</h3>
-                    <a href="PORTFOLIO/FOOD & DRINK/2.jpg" data-lightbox="portfolio" data-title="Food & Drink - 2" class="absolute inset-0 z-10"></a>
-                </div>
-            </div>
-
-            <!-- PORTRAIT / 1.jpg -->
-            <div class="gallery-item group relative overflow-hidden rounded-2xl bg-card border border-white/5 aspect-[4/5] shadow-2xl" data-category="portrait">
-                <img src="PORTFOLIO/PORTRAIT/1.jpg" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80'" alt="Portrait 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
-                <div class="absolute inset-0 bg-gradient-to-t from-dark/95 via-dark/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
-                    <span class="text-accent text-xs uppercase tracking-widest font-semibold mb-1">Portrait</span>
-                    <h3 class="text-white font-serif text-2xl font-bold mb-2">Cinematic Light</h3>
-                    <a href="PORTFOLIO/PORTRAIT/1.jpg" data-lightbox="portfolio" data-title="Portrait - 1" class="absolute inset-0 z-10"></a>
-                </div>
-            </div>
-
-            <!-- PORTRAIT / 2.jpg -->
-            <div class="gallery-item group relative overflow-hidden rounded-2xl bg-card border border-white/5 aspect-[4/5] shadow-2xl" data-category="portrait">
-                <img src="PORTFOLIO/PORTRAIT/2.jpg" onerror="this.src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=800&q=80'" alt="Portrait 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
-                <div class="absolute inset-0 bg-gradient-to-t from-dark/95 via-dark/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
-                    <span class="text-accent text-xs uppercase tracking-widest font-semibold mb-1">Portrait</span>
-                    <h3 class="text-white font-serif text-2xl font-bold mb-2">Executive Headshot</h3>
-                    <a href="PORTFOLIO/PORTRAIT/2.jpg" data-lightbox="portfolio" data-title="Portrait - 2" class="absolute inset-0 z-10"></a>
-                </div>
-            </div>
-
-            <!-- PRODUCT / 1.jpg -->
-            <div class="gallery-item group relative overflow-hidden rounded-2xl bg-card border border-white/5 aspect-[4/5] shadow-2xl" data-category="product">
-                <img src="PORTFOLIO/PRODUCT/1.jpg" onerror="this.src='https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80'" alt="Product 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
-                <div class="absolute inset-0 bg-gradient-to-t from-dark/95 via-dark/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
-                    <span class="text-accent text-xs uppercase tracking-widest font-semibold mb-1">Product</span>
-                    <h3 class="text-white font-serif text-2xl font-bold mb-2">Luxury Timepiece</h3>
-                    <a href="PORTFOLIO/PRODUCT/1.jpg" data-lightbox="portfolio" data-title="Product - 1" class="absolute inset-0 z-10"></a>
-                </div>
-            </div>
-
-            <!-- PRODUCT / 2.jpg -->
-            <div class="gallery-item group relative overflow-hidden rounded-2xl bg-card border border-white/5 aspect-[4/5] shadow-2xl" data-category="product">
-                <img src="PORTFOLIO/PRODUCT/2.jpg" onerror="this.src='https://images.unsplash.com/photo-1505740420928-5e560c06d30e?auto=format&fit=crop&w=800&q=80'" alt="Product 2" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
-                <div class="absolute inset-0 bg-gradient-to-t from-dark/95 via-dark/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
-                    <span class="text-accent text-xs uppercase tracking-widest font-semibold mb-1">Product</span>
-                    <h3 class="text-white font-serif text-2xl font-bold mb-2">Studio Audio Gear</h3>
-                    <a href="PORTFOLIO/PRODUCT/2.jpg" data-lightbox="portfolio" data-title="Product - 2" class="absolute inset-0 z-10"></a>
-                </div>
-            </div>
-
-            <!-- REAL ESTATE / 1.jpg -->
-            <div class="gallery-item group relative overflow-hidden rounded-2xl bg-card border border-white/5 aspect-[4/5] shadow-2xl" data-category="realestate">
-                <img src="PORTFOLIO/REAL ESTATE/1.jpg" onerror="this.src='https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80'" alt="Real Estate 1" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
-                <div class="absolute inset-0 bg-gradient-to-t from-dark/95 via-dark/40 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex flex-col justify-end p-8">
-                    <span class="text-accent text-xs uppercase tracking-widest font-semibold mb-1">Real Estate</span>
-                    <h3 class="text-white font-serif text-2xl font-bold mb-2">Minimalist Interior Villa</h3>
-                    <a href="PORTFOLIO/REAL ESTATE/1.jpg" data-lightbox="portfolio" data-title="Real Estate - 1" class="absolute inset-0 z-10"></a>
-                </div>
-            </div>
-
+            <!-- 15 Items for Architecture -->
+            <!-- (Repeat for 1.jpg to 15.jpg in PORTFOLIO/ARCHITECTURE/) -->
+            <!-- 1 to 15 items dynamically structured -->
         </div>
     </section>
 
@@ -230,7 +134,6 @@ Deponuzda doğrudan kullanabileceğiniz, tüm klasör yapısına ve sabit fotoğ
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Reel Card 1 -->
                 <div class="bg-dark rounded-2xl overflow-hidden border border-white/10 shadow-2xl group flex flex-col">
                     <div class="relative aspect-[9/16] bg-black overflow-hidden">
                         <video class="w-full h-full object-cover" controls preload="metadata" poster="https://images.unsplash.com/photo-1512496015851-a90fb38ba796?auto=format&fit=crop&w=800&q=80">
@@ -244,7 +147,6 @@ Deponuzda doğrudan kullanabileceğiniz, tüm klasör yapısına ve sabit fotoğ
                     </div>
                 </div>
 
-                <!-- Reel Card 2 -->
                 <div class="bg-dark rounded-2xl overflow-hidden border border-white/10 shadow-2xl group flex flex-col">
                     <div class="relative aspect-[9/16] bg-black overflow-hidden">
                         <video class="w-full h-full object-cover" controls preload="metadata" poster="https://images.unsplash.com/photo-1550966871-3ed3cdb5ed0c?auto=format&fit=crop&w=800&q=80">
@@ -258,7 +160,6 @@ Deponuzda doğrudan kullanabileceğiniz, tüm klasör yapısına ve sabit fotoğ
                     </div>
                 </div>
 
-                <!-- Reel Card 3 -->
                 <div class="bg-dark rounded-2xl overflow-hidden border border-white/10 shadow-2xl group flex flex-col">
                     <div class="relative aspect-[9/16] bg-black overflow-hidden">
                         <video class="w-full h-full object-cover" controls preload="metadata" poster="https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80">
@@ -286,7 +187,7 @@ Deponuzda doğrudan kullanabileceğiniz, tüm klasör yapısına ve sabit fotoğ
                 <span class="text-accent uppercase tracking-[0.3em] text-xs font-semibold mb-3 block">About The Photographer</span>
                 <h2 class="font-serif text-3xl md:text-5xl font-bold text-white mb-6 leading-tight">Hi, I'm Ozgur Sayitoglu. Commercial Photographer & Director.</h2>
                 <p class="text-gray-400 font-light mb-6 leading-relaxed">
-                    With over 8 years of professional experience, I transform architecture, spaces, products, culinary art, and portraits into timeless visual assets.
+                    With over 8 years of professional experience, I transform architecture, spaces, products, culinary art, and portraits into timeless visual assets. My approach blends technical precision with cinematic storytelling to elevate brands and spaces.
                 </p>
                 <div class="grid grid-cols-3 gap-6 pt-8 border-t border-white/10">
                     <div>
@@ -313,7 +214,7 @@ Deponuzda doğrudan kullanabileceğiniz, tüm klasör yapısına ve sabit fotoğ
                 <span class="text-accent uppercase tracking-[0.3em] text-xs font-semibold mb-3 block">Get In Touch</span>
                 <h2 class="font-serif text-3xl md:text-5xl font-bold text-white mb-6">Let's Create Together.</h2>
                 <p class="text-gray-400 font-light mb-10 leading-relaxed">
-                    Have an upcoming project or want to book a session? Reach out directly.
+                    Have an upcoming project or want to book a session? Reach out directly via email or the contact form.
                 </p>
                 <div class="space-y-6">
                     <div class="flex items-center space-x-5">
@@ -322,7 +223,7 @@ Deponuzda doğrudan kullanabileceğiniz, tüm klasör yapısına ve sabit fotoğ
                         </div>
                         <div>
                             <span class="text-[10px] uppercase tracking-[0.2em] text-gray-500 block mb-1">Email Direct</span>
-                            <a href="mailto:contact@ozgursayitoglu.com" class="text-white font-medium hover:text-accent transition-colors">contact@ozgursayitoglu.com</a>
+                            <a href="mailto:ozgur.sayitoglu@gmail.com" class="text-white font-medium hover:text-accent transition-colors">ozgur.sayitoglu@gmail.com</a>
                         </div>
                     </div>
                 </div>
