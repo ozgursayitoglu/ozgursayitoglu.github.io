@@ -22,7 +22,7 @@
                     }
                 }
             }
-        }
+        };
     </script>
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,600;1,400&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -33,20 +33,20 @@
     <!-- Header & Navigation -->
     <header class="fixed top-0 left-0 w-full z-50 bg-dark/80 backdrop-blur-xl border-b border-white/5 transition-all duration-300" id="navbar">
         <div class="max-w-7xl mx-auto px-6 h-24 flex items-center justify-between">
-            <a href="#" class="font-serif text-xl md:text-2xl tracking-widest text-white flex items-center gap-2">
+            <a href="index.html" class="font-serif text-xl md:text-2xl tracking-widest text-white flex items-center gap-2">
                 OZGUR SAYITOGLU<span class="text-accent font-bold">.</span>
             </a>
             
             <nav class="hidden md:flex items-center space-x-8 text-xs uppercase tracking-[0.25em] font-medium text-gray-300">
-                <a href="#home" class="hover:text-accent transition-colors">Home</a>
-                <a href="#portfolio" class="hover:text-accent transition-colors">Portfolio</a>
-                <a href="#reels" class="hover:text-accent transition-colors">Brand Reels</a>
-                <a href="#about" class="hover:text-accent transition-colors">About</a>
-                <a href="#contact" class="hover:text-accent transition-colors">Contact</a>
+                <a href="index.html#home" class="hover:text-accent transition-colors">Home</a>
+                <a href="index.html#portfolio" class="hover:text-accent transition-colors">Portfolio</a>
+                <a href="index.html#reels" class="hover:text-accent transition-colors">Brand Reels</a>
+                <a href="index.html#about" class="hover:text-accent transition-colors">About</a>
+                <a href="index.html#contact" class="hover:text-accent transition-colors">Contact</a>
             </nav>
 
             <div class="hidden md:flex items-center space-x-4">
-                <a href="#contact" class="px-6 py-3 rounded-full border border-accent/40 text-accent text-xs uppercase tracking-widest font-semibold hover:bg-accent hover:text-black transition-all duration-300 shadow-lg shadow-accent/5">
+                <a href="index.html#contact" class="px-6 py-3 rounded-full border border-accent/40 text-accent text-xs uppercase tracking-widest font-semibold hover:bg-accent hover:text-black transition-all duration-300 shadow-lg shadow-accent/5">
                     Book Session
                 </a>
             </div>
@@ -57,13 +57,13 @@
         </div>
 
         <div id="mobile-menu" class="hidden md:hidden bg-card/95 backdrop-blur-2xl border-b border-white/10 px-6 py-8 space-y-6 text-center shadow-2xl">
-            <a href="#home" class="block text-sm uppercase tracking-widest hover:text-accent transition-colors">Home</a>
-            <a href="#portfolio" class="block text-sm uppercase tracking-widest hover:text-accent transition-colors">Portfolio</a>
-            <a href="#reels" class="block text-sm uppercase tracking-widest hover:text-accent transition-colors">Brand Reels</a>
-            <a href="#about" class="block text-sm uppercase tracking-widest hover:text-accent transition-colors">About</a>
-            <a href="#contact" class="block text-sm uppercase tracking-widest hover:text-accent transition-colors">Contact</a>
+            <a href="index.html#home" class="block text-sm uppercase tracking-widest hover:text-accent transition-colors">Home</a>
+            <a href="index.html#portfolio" class="block text-sm uppercase tracking-widest hover:text-accent transition-colors">Portfolio</a>
+            <a href="index.html#reels" class="block text-sm uppercase tracking-widest hover:text-accent transition-colors">Brand Reels</a>
+            <a href="index.html#about" class="block text-sm uppercase tracking-widest hover:text-accent transition-colors">About</a>
+            <a href="index.html#contact" class="block text-sm uppercase tracking-widest hover:text-accent transition-colors">Contact</a>
             <div class="pt-2">
-                <a href="#contact" class="inline-block w-full py-3.5 rounded-full bg-accent text-black text-xs uppercase tracking-widest font-semibold">
+                <a href="index.html#contact" class="inline-block w-full py-3.5 rounded-full bg-accent text-black text-xs uppercase tracking-widest font-semibold">
                     Book Session
                 </a>
             </div>
@@ -97,25 +97,72 @@
         </div>
     </section>
 
-    <!-- Portfolio Section -->
+    <!-- Portfolio Section with Category Cards -->
     <section id="portfolio" class="py-32 px-6 max-w-7xl mx-auto">
-        <div class="flex flex-col md:flex-row md:items-end justify-between mb-16 gap-6">
-            <div>
-                <span class="text-accent uppercase tracking-[0.3em] text-xs font-semibold mb-3 block">Selected Works</span>
-                <h2 class="font-serif text-3xl md:text-5xl font-bold text-white">Portfolio Gallery</h2>
-            </div>
-            <div class="flex flex-wrap gap-2 md:gap-3" id="filter-buttons">
-                <button class="filter-btn active px-5 py-2.5 rounded-full text-xs uppercase tracking-widest font-medium transition-all bg-accent text-black shadow-md" data-filter="all">All</button>
-                <button class="filter-btn px-5 py-2.5 rounded-full text-xs uppercase tracking-widest font-medium transition-all bg-card text-gray-400 hover:text-white border border-white/5" data-filter="architecture">Architecture</button>
-                <button class="filter-btn px-5 py-2.5 rounded-full text-xs uppercase tracking-widest font-medium transition-all bg-card text-gray-400 hover:text-white border border-white/5" data-filter="food">Food & Drink</button>
-                <button class="filter-btn px-5 py-2.5 rounded-full text-xs uppercase tracking-widest font-medium transition-all bg-card text-gray-400 hover:text-white border border-white/5" data-filter="portrait">Portrait</button>
-                <button class="filter-btn px-5 py-2.5 rounded-full text-xs uppercase tracking-widest font-medium transition-all bg-card text-gray-400 hover:text-white border border-white/5" data-filter="product">Product</button>
-                <button class="filter-btn px-5 py-2.5 rounded-full text-xs uppercase tracking-widest font-medium transition-all bg-card text-gray-400 hover:text-white border border-white/5" data-filter="realestate">Real Estate</button>
-            </div>
+        <div class="text-center max-w-2xl mx-auto mb-20">
+            <span class="text-accent uppercase tracking-[0.3em] text-xs font-semibold mb-3 block">Selected Works</span>
+            <h2 class="font-serif text-3xl md:text-5xl font-bold text-white mb-4">Portfolio Categories</h2>
+            <p class="text-gray-400 font-light text-sm md:text-base">Click any category to explore the complete gallery.</p>
+            <div class="w-16 h-0.5 bg-accent mx-auto mt-6"></div>
         </div>
 
-        <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8" id="gallery-grid">
-            <!-- All 75 items (15 per category) are included here in full -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <a href="architecture.html" class="group relative overflow-hidden rounded-2xl bg-card border border-white/5 aspect-[4/5] shadow-2xl block">
+                <img src="PORTFOLIO/ARCHITECTURE/1.jpg" onerror="this.src='https://images.unsplash.com/photo-1600585154340-be6161a56a0c?auto=format&fit=crop&w=800&q=80'" alt="Architecture" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+                <div class="absolute inset-0 bg-gradient-to-t from-dark/95 via-dark/40 to-transparent flex flex-col justify-end p-8">
+                    <span class="text-accent text-xs uppercase tracking-widest font-semibold mb-1">Explore Gallery</span>
+                    <h3 class="text-white font-serif text-3xl font-bold mb-3">Architecture</h3>
+                    <span class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-white/80 group-hover:text-accent transition-colors">
+                        View Works <i class="fa-solid fa-arrow-right-long"></i>
+                    </span>
+                </div>
+            </a>
+
+            <a href="food.html" class="group relative overflow-hidden rounded-2xl bg-card border border-white/5 aspect-[4/5] shadow-2xl block">
+                <img src="PORTFOLIO/FOOD & DRINK/1.jpg" onerror="this.src='https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=800&q=80'" alt="Food & Drink" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+                <div class="absolute inset-0 bg-gradient-to-t from-dark/95 via-dark/40 to-transparent flex flex-col justify-end p-8">
+                    <span class="text-accent text-xs uppercase tracking-widest font-semibold mb-1">Explore Gallery</span>
+                    <h3 class="text-white font-serif text-3xl font-bold mb-3">Food & Drink</h3>
+                    <span class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-white/80 group-hover:text-accent transition-colors">
+                        View Works <i class="fa-solid fa-arrow-right-long"></i>
+                    </span>
+                </div>
+            </a>
+
+            <a href="portrait.html" class="group relative overflow-hidden rounded-2xl bg-card border border-white/5 aspect-[4/5] shadow-2xl block">
+                <img src="PORTFOLIO/PORTRAIT/1.jpg" onerror="this.src='https://images.unsplash.com/photo-1534528741775-53994a69daeb?auto=format&fit=crop&w=800&q=80'" alt="Portrait" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+                <div class="absolute inset-0 bg-gradient-to-t from-dark/95 via-dark/40 to-transparent flex flex-col justify-end p-8">
+                    <span class="text-accent text-xs uppercase tracking-widest font-semibold mb-1">Explore Gallery</span>
+                    <h3 class="text-white font-serif text-3xl font-bold mb-3">Portrait</h3>
+                    <span class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-white/80 group-hover:text-accent transition-colors">
+                        View Works <i class="fa-solid fa-arrow-right-long"></i>
+                    </span>
+                </div>
+            </a>
+
+            <a href="product.html" class="group relative overflow-hidden rounded-2xl bg-card border border-white/5 aspect-[4/5] shadow-2xl block">
+                <img src="PORTFOLIO/PRODUCT/1.jpg" onerror="this.src='https://images.unsplash.com/photo-1523275335684-37898b6baf30?auto=format&fit=crop&w=800&q=80'" alt="Product" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+                <div class="absolute inset-0 bg-gradient-to-t from-dark/95 via-dark/40 to-transparent flex flex-col justify-end p-8">
+                    <span class="text-accent text-xs uppercase tracking-widest font-semibold mb-1">Explore Gallery</span>
+                    <h3 class="text-white font-serif text-3xl font-bold mb-3">Product</h3>
+                    <span class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-white/80 group-hover:text-accent transition-colors">
+                        View Works <i class="fa-solid fa-arrow-right-long"></i>
+                    </span>
+                </div>
+            </a>
+
+            <a href="realestate.html" class="group relative overflow-hidden rounded-2xl bg-card border border-white/5 aspect-[4/5] shadow-2xl block">
+                <img src="PORTFOLIO/REAL ESTATE/1.jpg" onerror="this.src='https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?auto=format&fit=crop&w=800&q=80'" alt="Real Estate" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+                <div class="absolute inset-0 bg-gradient-to-t from-dark/95 via-dark/40 to-transparent flex flex-col justify-end p-8">
+                    <span class="text-accent text-xs uppercase tracking-widest font-semibold mb-1">Explore Gallery</span>
+                    <h3 class="text-white font-serif text-3xl font-bold mb-3">Real Estate</h3>
+                    <span class="inline-flex items-center gap-2 text-xs uppercase tracking-widest text-white/80 group-hover:text-accent transition-colors">
+                        View Works <i class="fa-solid fa-arrow-right-long"></i>
+                    </span>
+                </div>
+            </a>
+
         </div>
     </section>
 
@@ -265,12 +312,14 @@
     <script>
         const menuBtn = document.getElementById('menu-btn');
         const mobileMenu = document.getElementById('mobile-menu');
-        menuBtn.addEventListener('click', () => { mobileMenu.classList.toggle('hidden'); });
-
-        document.querySelectorAll('#mobile-menu a').forEach(link => {
-            link.addEventListener('click', () => { mobileMenu.classList.add('hidden'); });
+        menuBtn.addEventListener('click', () => {
+            mobileMenu.classList.toggle('hidden');
         });
-
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                mobileMenu.classList.add('hidden');
+            });
+        });
         window.addEventListener('scroll', () => {
             const navbar = document.getElementById('navbar');
             if (window.scrollY > 0) {
@@ -278,29 +327,6 @@
             } else {
                 navbar.classList.remove('bg-dark/95', 'shadow-xl');
             }
-        });
-
-        const filterBtns = document.querySelectorAll('.filter-btn');
-        const galleryItems = document.querySelectorAll('.gallery-item');
-
-        filterBtns.forEach(b => {
-            b.addEventListener('click', () => {
-                filterBtns.forEach(btn => {
-                    btn.classList.remove('bg-accent', 'text-black', 'shadow-md');
-                    btn.classList.add('bg-card', 'text-gray-400', 'border', 'border-white/5');
-                });
-                b.classList.remove('bg-card', 'text-gray-400', 'border', 'border-white/5');
-                b.classList.add('bg-accent', 'text-black', 'shadow-md');
-
-                const filter = b.getAttribute('data-filter');
-                galleryItems.forEach(item => {
-                    if (filter === 'all' || item.getAttribute('data-category') === filter) {
-                        item.style.display = 'block';
-                    } else {
-                        item.style.display = 'none';
-                    }
-                });
-            });
         });
     </script>
 </body>
