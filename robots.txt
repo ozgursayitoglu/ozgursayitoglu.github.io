@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://ozgursayitoglu.github.io/sitemap.xml
