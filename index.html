@@ -71,7 +71,7 @@
     </header>
 
     <!-- Hero Section -->
-    <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-cover bg-center px-6" style="background-image: linear-gradient(to bottom, rgba(7,7,7,0.4), rgba(7,7,7,0.95)), url('https://images.unsplash.com/photo-1492691527719-9d1e07e534b4?auto=format&fit=crop&w=1920&q=80');">
+    <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-cover bg-center px-6" style="background-image: linear-gradient(to bottom, rgba(7,7,7,0.4), rgba(7,7,7,0.95)), url('https://images.unsplash.com/photo-1507679799987-c73779587ccf?auto=format&fit=crop&w=1920&q=80');">
         <div class="relative z-10 text-center max-w-5xl mx-auto mt-16">
             <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-6 animate-pulse">
                 <span class="w-2 h-2 rounded-full bg-accent"></span>
@@ -159,44 +159,94 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <div class="bg-dark rounded-2xl overflow-hidden border border-white/10 shadow-2xl group flex flex-col">
+                <!-- Video 1 -->
+                <div onclick="openVideoModal('VIDEOS/1.mp4')" class="bg-dark rounded-2xl overflow-hidden border border-white/10 shadow-2xl group flex flex-col cursor-pointer transform hover:-translate-y-2 transition-all duration-300">
                     <div class="relative aspect-[9/16] bg-black overflow-hidden">
-                        <video class="w-full h-full object-cover" controls playsinline preload="auto" poster="VIDEOS/1.jpg">
-                            <source src="VIDEOS/1.mp4" type="video/mp4">
-                            Tarayıcınız video etiketini desteklemiyor.
-                        </video>
+                        <img src="VIDEOS/1.jpg" alt="Cinematic Teaser" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors flex items-center justify-center">
+                            <div class="w-16 h-16 rounded-full bg-accent text-black flex items-center justify-center text-xl shadow-2xl group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-play ml-1"></i>
+                            </div>
+                        </div>
                     </div>
                     <div class="p-8 text-center">
                         <h3 class="text-white font-serif text-xl font-bold">Cinematic Teaser</h3>
+                        <span class="text-xs uppercase tracking-widest text-accent mt-2 inline-block">Click to Watch in Fullscreen</span>
                     </div>
                 </div>
 
-                <div class="bg-dark rounded-2xl overflow-hidden border border-white/10 shadow-2xl group flex flex-col">
+                <!-- Video 2 -->
+                <div onclick="openVideoModal('VIDEOS/2.mp4')" class="bg-dark rounded-2xl overflow-hidden border border-white/10 shadow-2xl group flex flex-col cursor-pointer transform hover:-translate-y-2 transition-all duration-300">
                     <div class="relative aspect-[9/16] bg-black overflow-hidden">
-                        <video class="w-full h-full object-cover" controls playsinline preload="auto" poster="VIDEOS/2.jpg">
-                            <source src="VIDEOS/2.mp4" type="video/mp4">
-                            Tarayıcınız video etiketini desteklemiyor.
-                        </video>
+                        <img src="VIDEOS/2.jpg" alt="Commercial Production" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors flex items-center justify-center">
+                            <div class="w-16 h-16 rounded-full bg-accent text-black flex items-center justify-center text-xl shadow-2xl group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-play ml-1"></i>
+                            </div>
+                        </div>
                     </div>
                     <div class="p-8 text-center">
                         <h3 class="text-white font-serif text-xl font-bold">Commercial Production</h3>
+                        <span class="text-xs uppercase tracking-widest text-accent mt-2 inline-block">Click to Watch in Fullscreen</span>
                     </div>
                 </div>
 
-                <div class="bg-dark rounded-2xl overflow-hidden border border-white/10 shadow-2xl group flex flex-col">
+                <!-- Video 3 -->
+                <div onclick="openVideoModal('VIDEOS/3.mp4')" class="bg-dark rounded-2xl overflow-hidden border border-white/10 shadow-2xl group flex flex-col cursor-pointer transform hover:-translate-y-2 transition-all duration-300">
                     <div class="relative aspect-[9/16] bg-black overflow-hidden">
-                        <video class="w-full h-full object-cover" controls playsinline preload="auto" poster="VIDEOS/3.jpg">
-                            <source src="VIDEOS/3.mp4" type="video/mp4">
-                            Tarayıcınız video etiketini desteklemiyor.
-                        </video>
+                        <img src="VIDEOS/3.jpg" alt="Brand Visibility" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
+                        <div class="absolute inset-0 bg-black/30 group-hover:bg-black/10 transition-colors flex items-center justify-center">
+                            <div class="w-16 h-16 rounded-full bg-accent text-black flex items-center justify-center text-xl shadow-2xl group-hover:scale-110 transition-transform">
+                                <i class="fa-solid fa-play ml-1"></i>
+                            </div>
+                        </div>
                     </div>
                     <div class="p-8 text-center">
                         <h3 class="text-white font-serif text-xl font-bold">Brand Visibility</h3>
+                        <span class="text-xs uppercase tracking-widest text-accent mt-2 inline-block">Click to Watch in Fullscreen</span>
                     </div>
                 </div>
             </div>
-        </div>
-    </section>
+
+            <!-- Video Modal Popup -->
+            <div id="videoModal" class="fixed inset-0 z-50 hidden bg-black/95 backdrop-blur-xl flex items-center justify-center p-4 md:p-10">
+                <button onclick="closeVideoModal()" class="absolute top-6 right-6 text-white text-3xl hover:text-accent transition-colors focus:outline-none z-50 bg-white/10 w-12 h-12 rounded-full flex items-center justify-center">
+                    <i class="fa-solid fa-xmark"></i>
+                </button>
+                <div class="relative max-w-4xl w-full max-h-[90vh] flex items-center justify-center">
+                    <video id="modalVideo" class="max-h-[85vh] max-w-full rounded-2xl shadow-2xl object-contain" controls autoplay playsinline>
+                        <source id="modalVideoSource" src="" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+
+            <script>
+                function openVideoModal(videoSrc) {
+                    const modal = document.getElementById('videoModal');
+                    const video = document.getElementById('modalVideo');
+                    const source = document.getElementById('modalVideoSource');
+                    source.src = videoSrc;
+                    video.load();
+                    modal.classList.remove('hidden');
+                    video.play();
+                }
+
+                function closeVideoModal() {
+                    const modal = document.getElementById('videoModal');
+                    const video = document.getElementById('modalVideo');
+                    video.pause();
+                    video.currentTime = 0;
+                    modal.classList.add('hidden');
+                }
+
+                document.getElementById('videoModal').addEventListener('click', function(e) {
+                    if (e.target === this) {
+                        closeVideoModal();
+                    }
+                });
+            </script>
+        </section>
 
     <!-- About Section -->
     <section id="about" class="py-32 px-6 max-w-7xl mx-auto">
