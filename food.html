@@ -183,22 +183,27 @@
             return false;
         }
     }, true);
-</script>
-    <style>
-    /* 1. Sadece metin seçimi ve sürüklemeyi kapatıyoruz, sol tık (tıklama) artık engellenmiyor */
-    img, video, .lb-image {
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-        -webkit-touch-callout: none;
-        /* pointer-events satırını buradan tamamen kaldırdık ki sol tık ve geçişler bozulmasın */
-    }
+    </script>
+   <script>
+    // 1. Sayfadaki tüm görsellere sağ tık yapıldığında menünün açılmasını kesin olarak engelle
+    document.addEventListener('contextmenu', function(e) {
+        if (e.target.tagName === 'IMG' || e.target.tagName === 'VIDEO' || e.target.closest('.lb-image') || e.target.closest('.group')) {
+            e.preventDefault();
+            e.stopPropagation();
+            return false;
+        }
+    }, true);
 
-    /* 2. Portfolio ana kartlarının tıklanabilir olmasını sağla */
-    a.group {
-        pointer-events: auto !important;
-    }
-</style>
+    // 2. Lightbox (büyük fotoğraf) açıldığında da sağ tıkı engellemeye devam et
+    document.addEventListener('mousedown', function(e) {
+        if (e.button === 2) { // Sağ tık (Right click)
+            if (e.target.tagName === 'IMG' || e.target.tagName === 'VIDEO' || e.target.closest('.lb-image')) {
+                e.preventDefault();
+                e.stopPropagation();
+                return false;
+            }
+        }
+    }, true);
+</script>
 </body>
 </html>
