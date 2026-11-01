@@ -387,23 +387,22 @@
             }
         });
     </script>
-    <!-- İçerik Koruma (Görsel ve Video İndirme Engeli) Kodları -->
+   <!-- İçerik Koruma (Dinamik Sağ Tık ve İndirme Engeli) -->
     <script>
-        // 1. Sağ tık menüsünü engelle
+        // 1. Tüm belgede ve dinamik açılan pencerelerde sağ tık menüsünü engelle
         document.addEventListener('contextmenu', function(e) {
             e.preventDefault();
-        });
+        }, true);
 
-        // 2. Fotoğrafların sürüklenerek indirilmesini engelle
+        // 2. Fotoğrafların ve videoların sürüklenmesini engelle
         document.addEventListener('dragstart', function(e) {
-            if (e.target.nodeName === 'IMG' || e.target.nodeName === 'VIDEO') {
+            if (e.target.nodeName === 'IMG' || e.target.nodeName === 'VIDEO' || e.target.closest('.lb-image')) {
                 e.preventDefault();
             }
-        });
+        }, true);
 
-        // 3. Klavye kısayollarını (Kaydetme / Kopyalama) engelle
+        // 3. Klavye kısayollarını engelle
         document.addEventListener('keydown', function(e) {
-            // F12, Ctrl+U (Kaynak Görüntüleme), Ctrl+S (Kaydetme), Ctrl+C (Kopyalama)
             if (
                 e.keyCode === 123 || 
                 (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74)) || 
