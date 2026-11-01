@@ -59,15 +59,17 @@
             -webkit-touch-callout: none;
         }
     </style>
-    <style>
-    /* Görsellerin üzerine sağ tık yapılmasını ve menü açılmasını CSS ile tamamen dondurur */
-    img, video, .lightboxOverlay, .lb-dataContainer, .lb-outerContainer {
-        -webkit-touch-callout: none;
-        pointer-events: none; /* Mouse etkileşimini tamamen keser, böylece sağ tık algılanmaz */
+   <style>
+    /* 1. Tüm görsellerin üzerindeki fare tıklamalarını ve sağ tıkı fiziksel olarak kapatır */
+    img, video, .lb-image {
+        pointer-events: none !important;
+        -webkit-touch-callout: none !important;
+        -webkit-user-select: none !important;
+        user-select: none !important;
     }
-    
-    /* Sadece lightbox içindeki ana görselin tıklanabilir kalmasını sağlar ama sağ tık yine çalışmaz */
-    .lb-image {
+
+    /* 2. Portfolio ana kartlarındaki tıklama özelliğini korumak için bağlantı sarmalayıcısına tıklama izni veriyoruz */
+    a.group {
         pointer-events: auto !important;
     }
 </style>
