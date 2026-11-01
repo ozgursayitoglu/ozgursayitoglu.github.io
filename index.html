@@ -439,5 +439,33 @@
             });
         }, 500);
     </script>
+    <style>
+    /* 1. Tüm görsellerin üzerine tıklanmasını ve sağ tık yapılmasını tamamen kapatıyoruz */
+    img, video, .lb-image {
+        pointer-events: none !important;
+        -webkit-user-select: none !important;
+        user-select: none !important;
+    }
+
+    /* 2. Sitenin genelinde fotoğrafların üzerine gelen hayali bir koruma katmanı oluşturuyoruz */
+    .group {
+        position: relative;
+    }
+    .group::after {
+        content: "";
+        position: absolute;
+        inset: 0;
+        z-index: 10;
+        background: transparent;
+    }
+
+    /* 3. Portfolio kategori kartlarına tıklama özelliğini (linkleri) tekrar aktif ediyoruz */
+    a.group {
+        pointer-events: auto !important;
+    }
+    a.group::after {
+        pointer-events: none !important; /* Kartın linkine tıklanabilsin ama sağdaki fotoğrafa sağ tık yapılamasın */
+    }
+</style>
 </body>
 </html>
