@@ -174,21 +174,14 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
-<style>
-    /* 1. Sadece metin seçimi ve sürüklemeyi kapatıyoruz, sol tık (tıklama) artık engellenmiyor */
-    img, video, .lb-image {
-        -webkit-user-select: none;
-        -moz-user-select: none;
-        -ms-user-select: none;
-        user-select: none;
-        -webkit-touch-callout: none;
-        /* pointer-events satırını buradan tamamen kaldırdık ki sol tık ve geçişler bozulmasın */
-    }
-
-    /* 2. Portfolio ana kartlarının tıklanabilir olmasını sağla */
-    a.group {
-        pointer-events: auto !important;
-    }
-</style>
+<script>
+    // Sayfadaki tüm görsellere ve lightbox alanına gelen sağ tıklamaları anında yut ve engelle
+    window.addEventListener('contextmenu', function (e) {
+        if (e.target.tagName === 'IMG' || e.target.tagName === 'VIDEO' || e.target.closest('.lb-image') || e.target.closest('a')) {
+            e.preventDefault();
+            return false;
+        }
+    }, true);
+</script>
 </body>
 </html>
