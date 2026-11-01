@@ -174,47 +174,11 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
-    <script>
-    // Sayfadaki tüm görsellere sağ tık yapıldığında olayı anında keser ve engeller
-    document.addEventListener('contextmenu', function(e) {
-        if (e.target.tagName === 'IMG' || e.target.tagName === 'VIDEO' || e.target.closest('.lb-image')) {
-            e.preventDefault();
-            e.stopPropagation();
-            return false;
-        }
-    }, true);
-</script>
-     <!-- Dinamik Sağ Tık ve İndirme Koruması -->
-    <script>
-        document.addEventListener('contextmenu', function(e) {
-            e.preventDefault();
-            return false;
-        }, true);
-
-        document.addEventListener('dragstart', function(e) {
-            if (e.target.nodeName === 'IMG' || e.target.nodeName === 'VIDEO') {
-                e.preventDefault();
-            }
-        }, true);
-
-        document.addEventListener('keydown', function(e) {
-            if (
-                e.keyCode === 123 || 
-                (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74)) || 
-                (e.ctrlKey && (e.keyCode === 85 || e.keyCode === 83 || e.keyCode === 67))
-            ) {
-                e.preventDefault();
-                return false;
-            }
-        });
-
-      <script>
    <script>
-    // Sayfadaki tüm görsellere sağ tık yapıldığında olayı anında keser ve engeller
-    document.addEventListener('contextmenu', function(e) {
-        if (e.target.tagName === 'IMG' || e.target.tagName === 'VIDEO' || e.target.closest('.lb-image')) {
+    // Sayfadaki tüm görsellere ve lightbox alanına gelen sağ tıklamaları anında yut ve engelle
+    window.addEventListener('contextmenu', function (e) {
+        if (e.target.tagName === 'IMG' || e.target.tagName === 'VIDEO' || e.target.closest('.lb-image') || e.target.closest('a')) {
             e.preventDefault();
-            e.stopPropagation();
             return false;
         }
     }, true);
