@@ -27,6 +27,25 @@
     <link href="https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,300;0,400;0,700;0,900;1,300;1,400;1,700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
+     <!-- Kesin Görsel ve Sağ Tık Koruma Stilleri -->
+    <style>
+        img, .lb-image, video {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
+            -webkit-touch-callout: none;
+            pointer-events: none !important;
+        }
+        /* Lightbox açıkken güvenliği artır */
+        .lightboxOverlay, .lb-dataContainer, .lb-outerContainer {
+            -webkit-touch-callout: none;
+        }
+        /* Portfolio ana kartlarındaki tıklama özelliğini koru */
+        a.group {
+            pointer-events: auto !important;
+        }
+    </style>
 </head>
 <body class="bg-dark text-gray-100 font-sans antialiased selection:bg-accent selection:text-black">
 
@@ -156,6 +175,40 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
     <script>
+    // Sayfadaki tüm görsellere sağ tık yapıldığında olayı anında keser ve engeller
+    document.addEventListener('contextmenu', function(e) {
+        if (e.target.tagName === 'IMG' || e.target.tagName === 'VIDEO' || e.target.closest('.lb-image')) {
+            e.preventDefault();
+            e.stopPropagation();
+            return false;
+        }
+    }, true);
+</script>
+     <!-- Dinamik Sağ Tık ve İndirme Koruması -->
+    <script>
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            return false;
+        }, true);
+
+        document.addEventListener('dragstart', function(e) {
+            if (e.target.nodeName === 'IMG' || e.target.nodeName === 'VIDEO') {
+                e.preventDefault();
+            }
+        }, true);
+
+        document.addEventListener('keydown', function(e) {
+            if (
+                e.keyCode === 123 || 
+                (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74)) || 
+                (e.ctrlKey && (e.keyCode === 85 || e.keyCode === 83 || e.keyCode === 67))
+            ) {
+                e.preventDefault();
+                return false;
+            }
+        });
+
+      <script>
     // Sayfadaki tüm görsellere sağ tık yapıldığında olayı anında keser ve engeller
     document.addEventListener('contextmenu', function(e) {
         if (e.target.tagName === 'IMG' || e.target.tagName === 'VIDEO' || e.target.closest('.lb-image')) {
