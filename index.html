@@ -1,3 +1,8 @@
+İstediğiniz gibi **"Book Session"** (üst navigasyon ve mobil menüdeki) ve **"Get in Touch"** (hero bölümündeki) butonlarının hedeflerini, doğrudan e-posta uygulamasını açacak şekilde (`mailto:ozgur.sayitoglu@gmail.com?...`) güncelledim.
+
+İşte tüm bu düzenlemelerin uygulandığı eksiksiz ve güncel `index.html` kodunuz:
+
+```html
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth dark">
 <head>
@@ -83,7 +88,7 @@
             </nav>
 
             <div class="hidden md:flex items-center space-x-4">
-                <a href="index.html#contact" class="px-6 py-3 rounded-full border border-accent/40 text-accent text-xs uppercase tracking-widest font-semibold hover:bg-accent hover:text-black transition-all duration-300 shadow-lg shadow-accent/5">
+                <a href="mailto:ozgur.sayitoglu@gmail.com?subject=Project%20Inquiry%20/%20Booking&body=Hello%20Ozgur,%0D%0A%0D%0AI%20would%20like%20to%20get%20in%20touch%20regarding%20a%20photography%20session.%0D%0A%0D%0ADetails:" class="px-6 py-3 rounded-full border border-accent/40 text-accent text-xs uppercase tracking-widest font-semibold hover:bg-accent hover:text-black transition-all duration-300 shadow-lg shadow-accent/5">
                     Book Session
                 </a>
             </div>
@@ -100,7 +105,7 @@
             <a href="index.html#about" class="block text-sm uppercase tracking-widest hover:text-accent transition-colors">About</a>
             <a href="index.html#contact" class="block text-sm uppercase tracking-widest hover:text-accent transition-colors">Contact</a>
             <div class="pt-2">
-                <a href="index.html#contact" class="inline-block w-full py-3.5 rounded-full bg-accent text-black text-xs uppercase tracking-widest font-semibold">
+                <a href="mailto:ozgur.sayitoglu@gmail.com?subject=Project%20Inquiry%20/%20Booking&body=Hello%20Ozgur,%0D%0A%0D%0AI%20would%20like%20to%20get%20in%20touch%20regarding%20a%20photography%20session.%0D%0A%0D%0ADetails:" class="inline-block w-full py-3.5 rounded-full bg-accent text-black text-xs uppercase tracking-widest font-semibold">
                     Book Session
                 </a>
             </div>
@@ -111,6 +116,7 @@
   <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-cover bg-center px-6" style="background-image: linear-gradient(to bottom, rgba(7,7,7,0.8), rgba(7,7,7,0.95)), url('hero_bg.jpg');">
         <div class="relative z-10 text-center max-w-5xl mx-auto mt-16">
             <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-6">
+                <!--<span class="w-2 h-2 rounded-full bg-accent"></span> -->
                 <span class="text-accent uppercase tracking-[0.3em] text-[10px] md:text-xs font-semibold">Visual storytelling, precision in every frame.</span>
             </div>
             <h1 class="font-serif text-4xl sm:text-6xl md:text-8xl font-bold text-white tracking-tight mb-8 leading-[1.1]">
@@ -123,7 +129,7 @@
                 <a href="#portfolio" class="w-full sm:w-auto px-9 py-4 rounded-full bg-accent text-black font-semibold text-xs uppercase tracking-[0.2em] hover:bg-white transition-all duration-300 shadow-xl shadow-accent/10">
                     Explore Portfolio
                 </a>
-                <a href="#contact" class="w-full sm:w-auto px-9 py-4 rounded-full border border-white/20 text-white font-semibold text-xs uppercase tracking-[0.2em] hover:border-accent hover:text-accent transition-all duration-300 backdrop-blur-sm">
+                <a href="mailto:ozgur.sayitoglu@gmail.com?subject=Project%20Inquiry%20/%20Booking&body=Hello%20Ozgur,%0D%0A%0D%0AI%20would%20like%20to%20get%20in%20touch%20regarding%20a%20photography%20session.%0D%0A%0D%0ADetails:" class="w-full sm:w-auto px-9 py-4 rounded-full border border-white/20 text-white font-semibold text-xs uppercase tracking-[0.2em] hover:border-accent hover:text-accent transition-all duration-300 backdrop-blur-sm">
                     Get in Touch
                 </a>
             </div>
@@ -462,10 +468,17 @@
     </section>
 
  <!-- Footer -->
-    <footer class="py-12 px-6 border-t border-white/10 text-center text-gray-500 text-xs uppercase tracking-widest">
+    <footer class="py-12 px-6 border-t border-white/10 text-xs uppercase tracking-widest">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
-            <a href="index.html" class="flex items-center"><img src="logo_white.png" alt="Ozgur Sayitoglu" class="h-12 md:h-16 w-auto inline-block"></a>
-            <p>&copy; 2026 Ozgur Sayitoglu Photography. All rights reserved.</p>
+            <a href="index.html" class="flex items-center">
+                <img src="logo_white.png" alt="Ozgur Sayitoglu" class="h-12 md:h-16 w-auto inline-block">
+            </a>
+            <div class="flex flex-col items-start gap-1">
+                <p class="flex items-center gap-2 text-gray-300">
+                    <i class="fa-solid fa-location-dot text-accent"></i> Twickenham / London
+                </p>
+                <p class="text-gray-400">&copy; 2026 Ozgur Sayitoglu Photography. All rights reserved.</p>
+            </div>
         </div>
     </footer>
 
@@ -503,3 +516,5 @@
     </script>
 </body>
 </html>
+
+```
