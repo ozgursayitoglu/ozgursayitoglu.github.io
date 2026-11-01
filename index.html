@@ -387,5 +387,32 @@
             }
         });
     </script>
+    <!-- İçerik Koruma (Görsel ve Video İndirme Engeli) Kodları -->
+    <script>
+        // 1. Sağ tık menüsünü engelle
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+        });
+
+        // 2. Fotoğrafların sürüklenerek indirilmesini engelle
+        document.addEventListener('dragstart', function(e) {
+            if (e.target.nodeName === 'IMG' || e.target.nodeName === 'VIDEO') {
+                e.preventDefault();
+            }
+        });
+
+        // 3. Klavye kısayollarını (Kaydetme / Kopyalama) engelle
+        document.addEventListener('keydown', function(e) {
+            // F12, Ctrl+U (Kaynak Görüntüleme), Ctrl+S (Kaydetme), Ctrl+C (Kopyalama)
+            if (
+                e.keyCode === 123 || 
+                (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74)) || 
+                (e.ctrlKey && (e.keyCode === 85 || e.keyCode === 83 || e.keyCode === 67))
+            ) {
+                e.preventDefault();
+                return false;
+            }
+        });
+    </script>
 </body>
 </html>
