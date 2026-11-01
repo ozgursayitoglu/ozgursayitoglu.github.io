@@ -408,24 +408,18 @@
         });
     </script>
 
-   <style>
-    /* 1. Normal sayfa içindeki görsellerde sağ tık ve etkileşimi tamamen kapat */
-    img:not(.lb-image), video {
+  <style>
+    /* 1. Sadece metin seçimi ve sürüklemeyi kapatıyoruz, sol tık (tıklama) artık engellenmiyor */
+    img, video, .lb-image {
         -webkit-user-select: none;
         -moz-user-select: none;
         -ms-user-select: none;
         user-select: none;
         -webkit-touch-callout: none;
-        pointer-events: none !important;
+        /* pointer-events satırını buradan tamamen kaldırdık ki sol tık ve geçişler bozulmasın */
     }
 
-    /* 2. Lightbox açıkken büyük görselin tıklanabilir ve sonraki fotoğrafa geçebilir olmasını sağla */
-    .lb-image {
-        pointer-events: auto !important; /* Sol tıkla sonraki fotoğrafa geçişi tekrar aktif eder */
-        -webkit-touch-callout: none !important;
-    }
-
-    /* 3. Portfolio ana kartlarındaki tıklama özelliğini koru */
+    /* 2. Portfolio ana kartlarının tıklanabilir olmasını sağla */
     a.group {
         pointer-events: auto !important;
     }
