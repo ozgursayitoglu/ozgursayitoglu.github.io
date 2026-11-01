@@ -45,7 +45,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
 
-    <!-- Kesin Görsel ve Sağ Tık Koruma Stilleri -->
+   <!-- Kesin Görsel ve Sağ Tık Koruma Stilleri -->
     <style>
         img, .lb-image, video {
             -webkit-user-select: none;
@@ -53,26 +53,17 @@
             -ms-user-select: none;
             user-select: none;
             -webkit-touch-callout: none;
+            pointer-events: none !important;
         }
-        /* Lightbox açıkken sağ tık ve kaydetmeyi engelle */
+        /* Lightbox açıkken güvenliği artır */
         .lightboxOverlay, .lb-dataContainer, .lb-outerContainer {
             -webkit-touch-callout: none;
         }
+        /* Portfolio ana kartlarındaki tıklama özelliğini koru */
+        a.group {
+            pointer-events: auto !important;
+        }
     </style>
-   <style>
-    /* 1. Tüm görsellerin üzerindeki fare tıklamalarını ve sağ tıkı fiziksel olarak kapatır */
-    img, video, .lb-image {
-        pointer-events: none !important;
-        -webkit-touch-callout: none !important;
-        -webkit-user-select: none !important;
-        user-select: none !important;
-    }
-
-    /* 2. Portfolio ana kartlarındaki tıklama özelliğini korumak için bağlantı sarmalayıcısına tıklama izni veriyoruz */
-    a.group {
-        pointer-events: auto !important;
-    }
-</style>
 </head>
 <body class="bg-dark text-gray-100 font-sans antialiased selection:bg-accent selection:text-black" oncontextmenu="return false;">
 
