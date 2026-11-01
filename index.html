@@ -59,6 +59,18 @@
             -webkit-touch-callout: none;
         }
     </style>
+    <style>
+    /* Görsellerin üzerine sağ tık yapılmasını ve menü açılmasını CSS ile tamamen dondurur */
+    img, video, .lightboxOverlay, .lb-dataContainer, .lb-outerContainer {
+        -webkit-touch-callout: none;
+        pointer-events: none; /* Mouse etkileşimini tamamen keser, böylece sağ tık algılanmaz */
+    }
+    
+    /* Sadece lightbox içindeki ana görselin tıklanabilir kalmasını sağlar ama sağ tık yine çalışmaz */
+    .lb-image {
+        pointer-events: auto !important;
+    }
+</style>
 </head>
 <body class="bg-dark text-gray-100 font-sans antialiased selection:bg-accent selection:text-black" oncontextmenu="return false;">
 
