@@ -174,26 +174,27 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
-<script>
-    // 1. Sayfadaki tüm görsellere sağ tık yapıldığında menünün açılmasını kesin olarak engelle
-    document.addEventListener('contextmenu', function(e) {
-        if (e.target.tagName === 'IMG' || e.target.tagName === 'VIDEO' || e.target.closest('.lb-image') || e.target.closest('.group')) {
-            e.preventDefault();
-            e.stopPropagation();
-            return false;
-        }
-    }, true);
+<style>
+    /* 1. Normal sayfa içindeki görsellerde sağ tık ve etkileşimi tamamen kapat */
+    img:not(.lb-image), video {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        -webkit-touch-callout: none;
+        pointer-events: none !important;
+    }
 
-    // 2. Lightbox (büyük fotoğraf) açıldığında da sağ tıkı engellemeye devam et
-    document.addEventListener('mousedown', function(e) {
-        if (e.button === 2) { // Sağ tık (Right click)
-            if (e.target.tagName === 'IMG' || e.target.tagName === 'VIDEO' || e.target.closest('.lb-image')) {
-                e.preventDefault();
-                e.stopPropagation();
-                return false;
-            }
-        }
-    }, true);
-</script>
+    /* 2. Lightbox açıkken büyük görselin tıklanabilir ve sonraki fotoğrafa geçebilir olmasını sağla */
+    .lb-image {
+        pointer-events: auto !important; /* Sol tıkla sonraki fotoğrafa geçişi tekrar aktif eder */
+        -webkit-touch-callout: none !important;
+    }
+
+    /* 3. Portfolio ana kartlarındaki tıklama özelliğini koru */
+    a.group {
+        pointer-events: auto !important;
+    }
+</style>
 </body>
 </html>
