@@ -184,24 +184,12 @@
         }
     }, true);
     </script>
-   <script>
-    // 1. Sayfadaki tüm görsellere sağ tık yapıldığında menünün açılmasını kesin olarak engelle
-    document.addEventListener('contextmenu', function(e) {
-        if (e.target.tagName === 'IMG' || e.target.tagName === 'VIDEO' || e.target.closest('.lb-image') || e.target.closest('.group')) {
+ <script>
+    // Sayfadaki tüm görsellere ve lightbox alanına gelen sağ tıklamaları anında yut ve engelle
+    window.addEventListener('contextmenu', function (e) {
+        if (e.target.tagName === 'IMG' || e.target.tagName === 'VIDEO' || e.target.closest('.lb-image') || e.target.closest('a')) {
             e.preventDefault();
-            e.stopPropagation();
             return false;
-        }
-    }, true);
-
-    // 2. Lightbox (büyük fotoğraf) açıldığında da sağ tıkı engellemeye devam et
-    document.addEventListener('mousedown', function(e) {
-        if (e.button === 2) { // Sağ tık (Right click)
-            if (e.target.tagName === 'IMG' || e.target.tagName === 'VIDEO' || e.target.closest('.lb-image')) {
-                e.preventDefault();
-                e.stopPropagation();
-                return false;
-            }
         }
     }, true);
 </script>
