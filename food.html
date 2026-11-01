@@ -174,18 +174,15 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
-  <script>
-      /* 1. Normal sayfa içindeki görsellerde sağ tık ve etkileşimi tamamen kapat */
+ <script>
+    // Sayfadaki tüm görsellere sağ tık yapıldığında olayı anında keser ve engeller
     document.addEventListener('contextmenu', function(e) {
-        e.preventDefault();
-        return false;
+        if (e.target.tagName === 'IMG' || e.target.tagName === 'VIDEO' || e.target.closest('.lb-image')) {
+            e.preventDefault();
+            e.stopPropagation();
+            return false;
+        }
     }, true);
-    
-    setInterval(function() {
-        document.querySelectorAll('img, video, .lb-image').forEach(function(el) {
-            el.oncontextmenu = function() { return false; };
-        });
-    }, 500);
 </script>
 </body>
 </html>
