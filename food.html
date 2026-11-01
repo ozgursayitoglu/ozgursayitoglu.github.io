@@ -184,39 +184,27 @@
         }
     }, true);
 </script>
-     <!-- Dinamik Sağ Tık ve İndirme Koruması -->
-    <script>
-        document.addEventListener('contextmenu', function(e) {
-            e.preventDefault();
-            return false;
-        }, true);
+    <style>
+    /* 1. Normal sayfa içindeki görsellerde sağ tık ve etkileşimi tamamen kapat */
+    img:not(.lb-image), video {
+        -webkit-user-select: none;
+        -moz-user-select: none;
+        -ms-user-select: none;
+        user-select: none;
+        -webkit-touch-callout: none;
+        pointer-events: none !important;
+    }
 
-        document.addEventListener('dragstart', function(e) {
-            if (e.target.nodeName === 'IMG' || e.target.nodeName === 'VIDEO') {
-                e.preventDefault();
-            }
-        }, true);
+    /* 2. Lightbox açıkken büyük görselin tıklanabilir ve sonraki fotoğrafa geçebilir olmasını sağla */
+    .lb-image {
+        pointer-events: auto !important; /* Sol tıkla sonraki fotoğrafa geçişi tekrar aktif eder */
+        -webkit-touch-callout: none !important;
+    }
 
-        document.addEventListener('keydown', function(e) {
-            if (
-                e.keyCode === 123 || 
-                (e.ctrlKey && e.shiftKey && (e.keyCode === 73 || e.keyCode === 74)) || 
-                (e.ctrlKey && (e.keyCode === 85 || e.keyCode === 83 || e.keyCode === 67))
-            ) {
-                e.preventDefault();
-                return false;
-            }
-        });
-
-      <script>
-    // Sayfadaki tüm görsellere sağ tık yapıldığında olayı anında keser ve engeller
-    document.addEventListener('contextmenu', function(e) {
-        if (e.target.tagName === 'IMG' || e.target.tagName === 'VIDEO' || e.target.closest('.lb-image')) {
-            e.preventDefault();
-            e.stopPropagation();
-            return false;
-        }
-    }, true);
-</script>
+    /* 3. Portfolio ana kartlarındaki tıklama özelliğini koru */
+    a.group {
+        pointer-events: auto !important;
+    }
+</style>
 </body>
 </html>
