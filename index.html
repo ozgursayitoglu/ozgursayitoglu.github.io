@@ -1,12 +1,12 @@
 <!DOCTYPE html>
 <html lang="en" class="scroll-smooth dark">
-<script src="security.js"></script>
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ozgur Sayitoglu | Professional Photography & Brand Production</title>
-    
-    <!-- Google Search Console Doğrulama Kodu -->
+
+    <!-- Canonical & Google Search Console Doğrulama Kodu -->
+    <link rel="canonical" href="https://ozgursayitoglu.com/">
     <meta name="google-site-verification" content="M6HWOVrN8ylsGcm5iY8y5RZvrsKenmMmGmM2Ob6UzRE" />
 
     <!-- SEO Meta Tags for Google & Search Engines -->
@@ -14,13 +14,13 @@
     <meta name="keywords" content="Ozgur Sayitoglu, Ozgur Sayitoglu Photography, Photographer, Architectural Photography, Real Estate Photography, Brand Production, London Photographer">
     <meta name="author" content="Ozgur Sayitoglu">
     <meta name="robots" content="index, follow">
-    
+
     <!-- Open Graph / Social Media Meta Tags -->
     <meta property="og:title" content="Ozgur Sayitoglu | Professional Photography & Brand Production">
     <meta property="og:description" content="Professional architectural, real estate, food & drink, product, and portrait photography with cinematic visual storytelling.">
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://ozgursayitoglu.github.io">
-    <meta property="og:image" content="https://ozgursayitoglu.github.io/profil.jpg">
+    <meta property="og:url" content="https://ozgursayitoglu.com/">
+    <meta property="og:image" content="https://ozgursayitoglu.com/profil.jpg">
 
     <script src="https://cdn.tailwindcss.com"></script>
     <script>
@@ -46,7 +46,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css" rel="stylesheet">
 
-   <!-- Kesin Görsel ve Sağ Tık Koruma Stilleri -->
+    <!-- Görsel Koruma Stilleri -->
     <style>
         img, .lb-image, video {
             -webkit-user-select: none;
@@ -56,17 +56,17 @@
             -webkit-touch-callout: none;
             pointer-events: none !important;
         }
-        /* Lightbox açıkken güvenliği artır */
         .lightboxOverlay, .lb-dataContainer, .lb-outerContainer {
             -webkit-touch-callout: none;
         }
-        /* Portfolio ana kartlarındaki tıklama özelliğini koru */
         a.group {
             pointer-events: auto !important;
         }
     </style>
+
+    <script src="security.js" defer></script>
 </head>
-<body class="bg-dark text-gray-100 font-sans antialiased selection:bg-accent selection:text-black" oncontextmenu="return false;">
+<body class="bg-dark text-gray-100 font-sans antialiased selection:bg-accent selection:text-black">
 
     <!-- Header & Navigation -->
     <header class="fixed top-0 left-0 w-full z-50 bg-dark/80 backdrop-blur-xl border-b border-white/5 transition-all duration-300" id="navbar">
@@ -74,7 +74,7 @@
             <a href="index.html" class="flex items-center">
                 <img src="logo_white.png" alt="Ozgur Sayitoglu" class="h-12 md:h-16 w-auto inline-block">
             </a>
-            
+
             <nav class="hidden md:flex items-center space-x-8 text-xs uppercase tracking-[0.25em] font-medium text-gray-300">
                 <a href="index.html#home" class="hover:text-accent transition-colors">Home</a>
                 <a href="index.html#portfolio" class="hover:text-accent transition-colors">Portfolio</a>
@@ -109,10 +109,9 @@
     </header>
 
     <!-- Hero Section -->
-  <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-cover bg-center px-6" style="background-image: linear-gradient(to bottom, rgba(7,7,7,0.8), rgba(7,7,7,0.95)), url('hero_bg.jpg');">
+    <section id="home" class="relative min-h-screen flex items-center justify-center overflow-hidden bg-cover bg-center px-6" style="background-image: linear-gradient(to bottom, rgba(7,7,7,0.8), rgba(7,7,7,0.95)), url('hero_bg.jpg');">
         <div class="relative z-10 text-center max-w-5xl mx-auto mt-16">
             <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-white/5 border border-white/10 backdrop-blur-md mb-6">
-                <!--<span class="w-2 h-2 rounded-full bg-accent"></span> -->
                 <span class="text-accent uppercase tracking-[0.3em] text-[10px] md:text-xs font-semibold">Visual storytelling, precision in every frame.</span>
             </div>
             <h1 class="font-serif text-4xl sm:text-6xl md:text-8xl font-bold text-white tracking-tight mb-8 leading-[1.1]">
@@ -145,7 +144,6 @@
         </div>
 
         <div class="space-y-12">
-            
             <a href="food.html" class="group relative block overflow-hidden rounded-3xl bg-card border border-white/5 aspect-[16/9] shadow-2xl">
                 <img src="PORTFOLIO/FOOD & DRINK/1.jpg" onerror="this.src='https://images.unsplash.com/photo-1555396273-367ea4eb4db5?auto=format&fit=crop&w=1600&q=85'" alt="Food & Drink" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
                 <div class="absolute inset-0 bg-gradient-to-t from-dark/95 via-dark/50 to-transparent flex flex-col justify-end p-8 md:p-12">
@@ -180,23 +178,15 @@
                     <h3 class="font-serif text-3xl md:text-5xl font-bold text-white mb-2 group-hover:text-accent transition-colors">Architecture</h3>
                 </div>
             </a>
-
         </div>
     </section>
 
-    <!-- OS Photography Section (Product Photography Feature - Moved Above Reels) -->
+    <!-- OS Photography Section -->
     <section id="os-photography" class="py-32 px-6 bg-card border-t border-white/5">
         <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-            
-            <!-- Left Side: osp.jpg Image -->
             <div class="relative order-2 lg:order-1">
                 <div class="absolute -bottom-12 -right-12 w-72 h-72 bg-accent/5 rounded-full blur-3xl"></div>
-                
-                <img src="osp.jpg" 
-                     onerror="this.src='https://images.unsplash.com/photo-1635929546939-7424bf98505e?auto=format&fit=crop&w=800&q=80'" 
-                     alt="OS Photography Creative Product Shoot" 
-                     class="relative z-10 rounded-3xl w-full h-auto object-cover aspect-[4/6] md:aspect-[4/5] shadow-2xl border border-white/10">
-                
+                <img src="osp.jpg" onerror="this.src='https://images.unsplash.com/photo-1635929546939-7424bf98505e?auto=format&fit=crop&w=800&q=80'" alt="OS Photography Creative Product Shoot" class="relative z-10 rounded-3xl w-full h-auto object-cover aspect-[4/6] md:aspect-[4/5] shadow-2xl border border-white/10">
                 <div class="absolute bottom-8 left-8 z-20">
                     <div class="px-4 py-1.5 rounded-full bg-white/5 backdrop-blur-md border border-white/10">
                         <span class="text-[10px] text-white uppercase tracking-[0.25em] font-medium">
@@ -206,7 +196,6 @@
                 </div>
             </div>
 
-            <!-- Right Side: OS Photography Content -->
             <div class="order-1 lg:order-2 space-y-10">
                 <div>
                     <span class="text-accent uppercase tracking-[0.3em] text-xs font-semibold mb-3 block">
@@ -221,7 +210,6 @@
                 </div>
 
                 <div class="space-y-6 pt-8 border-t border-white/10">
-                    <!-- Why Choose Points -->
                     <div class="flex items-start gap-5">
                         <div class="w-10 h-10 rounded-full bg-accent/10 flex items-center justify-center text-accent shrink-0 mt-0.5">
                             <i class="fa-solid fa-camera-retro"></i>
@@ -252,7 +240,6 @@
                         </div>
                     </div>
                 </div>
-
             </div>
         </div>
     </section>
@@ -270,7 +257,6 @@
             </div>
 
             <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-                <!-- Video 1 -->
                 <div onclick="openVideoModal('VIDEOS/1.mp4')" class="bg-card rounded-2xl overflow-hidden border border-white/10 shadow-2xl group flex flex-col cursor-pointer transform hover:-translate-y-2 transition-all duration-300">
                     <div class="relative aspect-[9/16] bg-black overflow-hidden">
                         <img src="VIDEOS/1.jpg" alt="Cinematic Teaser" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
@@ -286,7 +272,6 @@
                     </div>
                 </div>
 
-                <!-- Video 2 -->
                 <div onclick="openVideoModal('VIDEOS/2.mp4')" class="bg-card rounded-2xl overflow-hidden border border-white/10 shadow-2xl group flex flex-col cursor-pointer transform hover:-translate-y-2 transition-all duration-300">
                     <div class="relative aspect-[9/16] bg-black overflow-hidden">
                         <img src="VIDEOS/2.jpg" alt="Commercial Production" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
@@ -302,7 +287,6 @@
                     </div>
                 </div>
 
-                <!-- Video 3 -->
                 <div onclick="openVideoModal('VIDEOS/3.mp4')" class="bg-card rounded-2xl overflow-hidden border border-white/10 shadow-2xl group flex flex-col cursor-pointer transform hover:-translate-y-2 transition-all duration-300">
                     <div class="relative aspect-[9/16] bg-black overflow-hidden">
                         <img src="VIDEOS/3.jpg" alt="Brand Visibility" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700">
@@ -331,36 +315,9 @@
                     </video>
                 </div>
             </div>
-
-            <script>
-                function openVideoModal(videoSrc) {
-                    const modal = document.getElementById('videoModal');
-                    const video = document.getElementById('modalVideo');
-                    const source = document.getElementById('modalVideoSource');
-                    source.src = videoSrc;
-                    video.load();
-                    modal.classList.remove('hidden');
-                    video.play();
-                }
-
-                function closeVideoModal() {
-                    const modal = document.getElementById('videoModal');
-                    const video = document.getElementById('modalVideo');
-                    video.pause();
-                    video.currentTime = 0;
-                    modal.classList.add('hidden');
-                }
-
-                document.getElementById('videoModal').addEventListener('click', function(e) {
-                    if (e.target === this) {
-                        closeVideoModal();
-                    }
-                });
-            </script>
         </div>
     </section>
 
-    <!-- Gri Boşluk / Bölüm Ayrıcı Çizgi -->
     <div class="max-w-7xl mx-auto px-6"><div class="border-t border-white/10"></div></div>
 
     <!-- About Section -->
@@ -394,7 +351,7 @@
         </div>
     </section>
 
-   <!-- Contact Section -->
+    <!-- Contact Section -->
     <section id="contact" class="py-32 bg-card border-t border-white/5 px-6">
         <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
             <div>
@@ -420,7 +377,7 @@
                         </div>
                         <div>
                             <span class="text-[10px] uppercase tracking-[0.2em] text-gray-500 block mb-1">Instagram</span>
-                            <a href="https://www.instagram.com/os.images/" target="_blank" class="text-white font-medium hover:text-accent transition-colors">@os.images</a>
+                            <a href="https://www.instagram.com/os.images/" target="_blank" rel="noopener noreferrer" class="text-white font-medium hover:text-accent transition-colors">@os.images</a>
                         </div>
                     </div>
 
@@ -430,11 +387,10 @@
                         </div>
                         <div>
                             <span class="text-[10px] uppercase tracking-[0.2em] text-gray-500 block mb-1">YouTube</span>
-                            <a href="https://www.youtube.com/@ozgursayitoglu" target="_blank" class="text-white font-medium hover:text-accent transition-colors">Ozgur Sayitoglu</a>
+                            <a href="https://www.youtube.com/@ozgursayitoglu" target="_blank" rel="noopener noreferrer" class="text-white font-medium hover:text-accent transition-colors">Ozgur Sayitoglu</a>
                         </div>
                     </div>
 
-                    <!-- Location Address Added Here -->
                     <div class="flex items-center space-x-5 pt-2">
                         <div class="w-14 h-14 rounded-2xl bg-accent/10 flex items-center justify-center text-accent text-lg">
                             <i class="fa-solid fa-location-dot"></i>
@@ -463,7 +419,7 @@
         </div>
     </section>
 
- <!-- Footer -->
+    <!-- Footer -->
     <footer class="py-12 px-6 border-t border-white/10 text-xs uppercase tracking-widest">
         <div class="max-w-7xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
             <a href="index.html" class="flex items-center">
@@ -492,6 +448,7 @@
                 mobileMenu.classList.add('hidden');
             });
         });
+
         window.addEventListener('scroll', () => {
             const navbar = document.getElementById('navbar');
             if (window.scrollY > 0) {
@@ -500,17 +457,30 @@
                 navbar.classList.remove('bg-dark/95', 'shadow-xl');
             }
         });
-    </script>
-    <script>
-        // Sayfadaki tüm görsellere ve lightbox alanına gelen sağ tıklamaları anında yut ve engelle
-        window.addEventListener('contextmenu', function (e) {
-            if (e.target.tagName === 'IMG' || e.target.tagName === 'VIDEO' || e.target.closest('.lb-image') || e.target.closest('a')) {
-                e.preventDefault();
-                return false;
+
+        function openVideoModal(videoSrc) {
+            const modal = document.getElementById('videoModal');
+            const video = document.getElementById('modalVideo');
+            const source = document.getElementById('modalVideoSource');
+            source.src = videoSrc;
+            video.load();
+            modal.classList.remove('hidden');
+            video.play();
+        }
+
+        function closeVideoModal() {
+            const modal = document.getElementById('videoModal');
+            const video = document.getElementById('modalVideo');
+            video.pause();
+            video.currentTime = 0;
+            modal.classList.add('hidden');
+        }
+
+        document.getElementById('videoModal').addEventListener('click', function (e) {
+            if (e.target === this) {
+                closeVideoModal();
             }
-        }, true);
+        });
     </script>
 </body>
 </html>
-
-```
